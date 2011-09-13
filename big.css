@@ -1,0 +1,21 @@
+body {
+  font-family: 'Helvetica';
+  background:#000;
+  color:#fff;
+  margin:0;
+  font-weight:bold;
+}
+
+em, a {
+  color:#34d0e7;
+}
+
+a {
+  background: #34d0e7;
+  color:#000;
+  text-decoration:none;
+}
+
+img {
+  width:100%;
+}
