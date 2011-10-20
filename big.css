@@ -1,9 +1,14 @@
 body {
   font-family: 'Helvetica';
+  letter-spacing:-5px;
   background:#000;
   color:#fff;
   margin:0;
   font-weight:bold;
+}
+
+h1, h2, h3 {
+  margin:0;
 }
 
 em, a {
@@ -18,4 +23,9 @@ a {
 
 img {
   width:100%;
+}
+
+section {
+  font-size:900px;
+  display:none;
 }
