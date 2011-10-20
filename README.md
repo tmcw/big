@@ -22,4 +22,11 @@ See [the demo](http://macwright.org/big) for an example of it working.
 <div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
 ```
 
+## Presentations with Big
+
+* [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
+* Yours? Post it in issues.
+
+## License
+
 It's CC0: Public Domain
