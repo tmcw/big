@@ -29,6 +29,11 @@ window.onload = function() {
 
     g(cur);
 
+    window.onclick = function() {
+        cur = Math.min(s.length - 1, ++cur);
+        g(cur);
+    };
+
     window.onkeydown = function(e) {
         if (e.which === 39) {
             cur = Math.min(s.length - 1, ++cur);

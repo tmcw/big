@@ -28,5 +28,6 @@ img {
 }
 
 div {
-  vertical-align:middle;
+  cursor:pointer;
+  cursor:hand;
 }
