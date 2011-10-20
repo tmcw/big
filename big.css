@@ -12,7 +12,8 @@ h1, h2, h3 {
 }
 
 em, a {
-  color:#34d0e7;
+  font-style:normal;
+  color:#8dbd0c;
 }
 
 a {
@@ -25,7 +26,6 @@ img {
   width:100%;
 }
 
-section {
-  font-size:900px;
-  display:none;
+div {
+  vertical-align:middle;
 }

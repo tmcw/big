@@ -4,20 +4,10 @@ creative, hurried people.
 It makes text and images as big as they can be, gives you minimal
 styling (`em`), and gives you left/right arrows for navigation.
 
-Use it by throwing this HTML chunk at the top of pages.
+Use it by throwing the HTML chunk at the top of pages, and then
+divs for slides.
 
-```html
-<html><head><title></title><link href='big.css' rel='stylesheet' type='text/css' /><script src='big.js'></script></head><body><span id='t'>
-```
+See [the demo](http://macwright.org/big) for an example of it working,
+and [the source for the demo for an example of how to make it work](https://github.com/tmcw/big/blob/gh-pages/index.html).
 
-The last page has this to make sure you don't run off the tracks.
-
-```html
-<html><head><title></title><link href='big.css' rel='stylesheet' type='text/css' /><script src='big.js'></script></head><body class='last'><span id='t'>
-```
-
-
-# Authors
-
-* tmcw
-* visual style cribbed from stamen
+CC0: Public Domain

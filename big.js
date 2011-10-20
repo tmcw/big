@@ -1,5 +1,5 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('section'), cur = 0;
+    var s = document.getElementsByTagName('div'), cur = 0;
     if (!s) return;
 
     function hide() {
@@ -9,7 +9,7 @@ window.onload = function() {
     function g(n) {
         hide();
         var i = 1000;
-        s[n].style.display = 'block';
+        s[n].style.display = 'inline';
         s[n].style.fontSize = i + 'px';
         while (
             s[n].offsetWidth > window.innerWidth ||
@@ -17,9 +17,17 @@ window.onload = function() {
             i -= 10;
             s[n].style.fontSize = i + 'px';
         }
+        window.location.hash = n;
     }
 
-    g(0);
+    if (window.location.hash) {
+        var c = parseInt(window.location.hash.substring(1), 10);
+        if (!isNaN(c)) {
+             cur = Math.max(Math.min(s.length - 1, c), 0);
+        }
+    }
+
+    g(cur);
 
     window.onkeydown = function(e) {
         if (e.which === 39) {
