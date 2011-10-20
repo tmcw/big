@@ -12,7 +12,7 @@ window.onload = function() {
             i -= 10;
             s[n].style.fontSize = i + 'px';
         }
-        window.location.hash = n;
+        if (window.location.hash !== n) window.location.hash = n;
     }
     document.onclick = function() {
         cur = ++cur % (s.length);
@@ -26,6 +26,12 @@ window.onload = function() {
         Math.min(
             s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0) || cur;
+    window.onhashchange = function() {
+        var c = Math.max(Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0);
+        if (c !== cur) go(cur = c);
+    };
 
     go(cur);
 };
