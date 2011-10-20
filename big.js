@@ -6,7 +6,7 @@ window.onload = function() {
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
     }
 
-    function g(n) {
+    function go(n) {
         hide();
         var i = 1000;
         s[n].style.display = 'inline';
@@ -20,27 +20,24 @@ window.onload = function() {
         window.location.hash = n;
     }
 
-    if (window.location.hash) {
-        var c = parseInt(window.location.hash.substring(1), 10);
-        if (!isNaN(c)) {
-             cur = Math.max(Math.min(s.length - 1, c), 0);
-        }
-    }
-
-    g(cur);
-
-    window.onclick = function() {
-        cur = Math.min(s.length - 1, ++cur);
-        g(cur);
+    document.onclick = function() {
+        cur = ++cur % (s.length);
+        go(cur);
     };
 
-    window.onkeydown = function(e) {
+    document.onkeydown = function(e) {
         if (e.which === 39) {
-            cur = Math.min(s.length - 1, ++cur);
-            g(cur);
-        } else if (e.which === 37) {
-            cur = Math.max(0, --cur);
-            g(cur);
+            go(cur = Math.min(s.length - 1, ++cur));
+        }
+        if (e.which === 37) {
+            go(cur = Math.max(0, --cur));
         }
     };
+
+    if (window.location.hash) cur = Math.max(
+        Math.min(
+            s.length - 1,
+            parseInt(window.location.hash.substring(1), 10)), 0) || cur;
+
+    go(cur);
 };
