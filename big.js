@@ -6,11 +6,16 @@ window.onload = function() {
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         s[n].style.display = 'inline';
         s[n].style.fontSize = i + 'px';
-        while (
-            s[n].offsetWidth > window.innerWidth ||
-            s[n].offsetHeight > window.innerHeight) {
-            i -= 10;
-            s[n].style.fontSize = i + 'px';
+        if (s[n].firstChild.nodeName === 'IMG') {
+            s[n].style.right = 0;
+            s[n].style.bottom = 0;
+        } else {
+            while (
+                s[n].offsetWidth > window.innerWidth ||
+                s[n].offsetHeight > window.innerHeight) {
+                i -= 10;
+                s[n].style.fontSize = i + 'px';
+            }
         }
         if (window.location.hash !== n) window.location.hash = n;
     }
