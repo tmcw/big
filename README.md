@@ -24,6 +24,7 @@ See [the demo](http://macwright.org/big) for an example of it working.
 
 ## Presentations with Big
 
+* [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
 * Yours? Post it in issues.
 
