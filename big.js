@@ -7,15 +7,15 @@ window.onload = function() {
         s[n].style.display = 'inline';
         s[n].style.fontSize = i + 'px';
         if (s[n].firstChild.nodeName === 'IMG') {
-            s[n].style.right = 0;
-            s[n].style.bottom = 0;
+            document.body.style.backgroundImage = 'url(' + s[n].firstChild.src + ')';
+            s[n].firstChild.style.display = 'none';
         } else {
-            while (
-                s[n].offsetWidth > window.innerWidth ||
-                s[n].offsetHeight > window.innerHeight) {
-                i -= 10;
-                s[n].style.fontSize = i + 'px';
-            }
+            document.body.style.backgroundImage = '';
+        }
+        while (
+            s[n].offsetWidth > window.innerWidth ||
+            s[n].offsetHeight > window.innerHeight) {
+            s[n].style.fontSize = (i -= 10) + 'px';
         }
         if (window.location.hash !== n) window.location.hash = n;
     }
