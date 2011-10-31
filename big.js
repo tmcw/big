@@ -19,7 +19,7 @@ window.onload = function() {
             e.style.fontSize = (i -= 10) + 'px';
         }
         if (window.location.hash !== n) window.location.hash = n;
-        document.title = s[n].textContent || s[n].innerText;
+        document.title = e.textContent || e.innerText;
     }
     document.onclick = function() {
         go(++cur % (s.length));
