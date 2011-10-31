@@ -2,6 +2,7 @@ window.onload = function() {
     var s = document.getElementsByTagName('div'), cur = 0;
     if (!s) return;
     function go(n) {
+        cur = n;
         var i = 1e3, e = s[n];
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
@@ -20,12 +21,11 @@ window.onload = function() {
         if (window.location.hash !== n) window.location.hash = n;
     }
     document.onclick = function() {
-        cur = ++cur % (s.length);
-        go(cur);
+        go(++cur % (s.length));
     };
     document.onkeydown = function(e) {
-        (e.which === 39) && go(cur = Math.min(s.length - 1, ++cur));
-        (e.which === 37) && go(cur = Math.max(0, --cur));
+        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
+        (e.which === 37) && go(Math.max(0, --cur));
     };
     if (window.location.hash) cur = Math.max(
         Math.min(
@@ -35,7 +35,7 @@ window.onload = function() {
         var c = Math.max(Math.min(
             s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
-        if (c !== cur) go(cur = c);
+        if (c !== cur) go(c);
     };
 
     go(cur);
