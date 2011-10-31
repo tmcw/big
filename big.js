@@ -27,14 +27,14 @@ window.onload = function() {
         (e.which === 39) && go(Math.min(s.length - 1, ++cur));
         (e.which === 37) && go(Math.max(0, --cur));
     };
-    if (window.location.hash) cur = Math.max(
-        Math.min(
-            s.length - 1,
-            parseInt(window.location.hash.substring(1), 10)), 0) || cur;
-    window.onhashchange = function() {
-        var c = Math.max(Math.min(
+    function parse_hash() {
+        return Math.max(Math.min(
             s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
+    };
+    if (window.location.hash) cur = parse_hash() || cur;
+    window.onhashchange = function() {
+        var c = parse_hash();
         if (c !== cur) go(c);
     };
 
