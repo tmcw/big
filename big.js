@@ -18,6 +18,7 @@ window.onload = function() {
             s[n].style.fontSize = (i -= 10) + 'px';
         }
         if (window.location.hash !== n) window.location.hash = n;
+        document.title = s[n].textContent || s[n].innerText;
     }
     document.onclick = function() {
         cur = ++cur % (s.length);
