@@ -26,6 +26,11 @@ so no conference-wifi-pwn.
 
 It's CC0: Public Domain
 
+## HTML5
+
+Big is totally HTML5! It uses the HTML5 doctype: `<!DOCTYPE html>`!
+It's therefore imbued with standardslicious hypeclouds.
+
 ## Source
 
 The source looks like:
