@@ -22,9 +22,9 @@ so no conference-wifi-pwn.
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
 * Yours? Post it in issues.
 
-## License
+## Open Source
 
-It's CC0: Public Domain
+* Big is awesomer because [lambda](https://github.com/lambda) contributed to it! And you can too: it's Public Domain, CC0.
 
 ## HTML5
 
