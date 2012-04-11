@@ -18,6 +18,8 @@ so no conference-wifi-pwn.
 ## Presentations with Big
 
 * [the demo](http://macwright.org/big)
+* [FOSS4G: Beyond](http://macwright.org/presentations/beyond/)
+* [Project It Yourself](http://macwright.org/presentations/projections/#0)
 * [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
 * Yours? Post it in issues.
