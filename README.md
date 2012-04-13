@@ -49,3 +49,8 @@ The source looks like:
 <div><img src='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg' /></div>
 <div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
 ```
+
+## 'features'
+
+* If you put an image as the first thing in a slide, it'll become a tiled background. I abused this power in
+  [my presentation on project it yourself](http://macwright.org/about/)
