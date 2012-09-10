@@ -54,4 +54,4 @@ The source looks like:
 ## 'features'
 
 * If you put an image as the first thing in a slide, it'll become a tiled background. I abused this power in
-  [my presentation on project it yourself](http://macwright.org/about/)
+  [my presentation on project it yourself](http://macwright.org/presentations/projections/#0)
