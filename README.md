@@ -1,3 +1,4 @@
+
 This is a ridiculous presentation system that works great for
 creative, hurried people. See [the demo](http://macwright.org/big)
 for an example of it working.
@@ -55,3 +56,7 @@ The source looks like:
 
 * If you put an image as the first thing in a slide, it'll become a tiled background. I abused this power in
   [my presentation on project it yourself](http://macwright.org/presentations/projections/#0)
+
+## See Also
+
+* [Jed Schmidt's weenote is a awesome big-inspired software](https://github.com/jed/weenote)
