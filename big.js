@@ -32,7 +32,7 @@ window.onload = function() {
         return Math.max(Math.min(
             s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
-    };
+    }
     if (window.location.hash) cur = parse_hash() || cur;
     window.onhashchange = function() {
         var c = parse_hash();
