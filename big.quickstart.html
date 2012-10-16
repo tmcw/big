@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><title></title><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
+<!DOCTYPE html><html><head><title></title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><style type='text/css'>
 body {
   font-family: 'Helvetica';
   letter-spacing:-5px;
@@ -56,6 +56,7 @@ window.onload = function() {
             e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
             e.style.fontSize = (i -= 10) + 'px';
+            if (i < 0) break;
         }
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
@@ -71,7 +72,7 @@ window.onload = function() {
         return Math.max(Math.min(
             s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
-    };
+    }
     if (window.location.hash) cur = parse_hash() || cur;
     window.onhashchange = function() {
         var c = parse_hash();
