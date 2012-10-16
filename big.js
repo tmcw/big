@@ -17,6 +17,7 @@ window.onload = function() {
             e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
             e.style.fontSize = (i -= 10) + 'px';
+            if (i < 0) break;
         }
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
