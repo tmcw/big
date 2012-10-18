@@ -12,6 +12,7 @@ window.onload = function() {
             e.firstChild.style.display = 'none';
         } else {
             document.body.style.backgroundImage = '';
+            document.body.style.backgroundColor = e.style.backgroundColor;
         }
         while (
             e.offsetWidth > window.innerWidth ||
