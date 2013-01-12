@@ -26,8 +26,9 @@ so no conference-wifi-pwn.
 
 ## Themes
 
-* [Medium / SOTMUS big.css](https://gist.github.com/3875192) - dark on light, Helvetica
-* [Project It Yourself big.css](https://gist.github.com/3875180) - light on dark, blinking em elements, slight tilt to everything
+[big-themes](https://github.com/tmcw/big-themes) ([[website](http://macwright.org/big-themes/#0))
+is a fledgling new repository for big themes. Try one, make one, take one home
+today.
 
 ## Open Source
 
