@@ -26,7 +26,7 @@ so no conference-wifi-pwn.
 
 ## Themes
 
-[big-themes](https://github.com/tmcw/big-themes) ([[website](http://macwright.org/big-themes/#0))
+[big-themes](https://github.com/tmcw/big-themes) ([website](http://macwright.org/big-themes/#0))
 is a fledgling new repository for big themes. Try one, make one, take one home
 today.
 
