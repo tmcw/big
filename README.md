@@ -20,6 +20,7 @@ so no conference-wifi-pwn.
 * [the demo](http://macwright.org/big)
 * [javascript for cats](http://maxogden.github.com/slides/empirejs/index.html#0) by [Max Ogden](http://maxogden.com/) for [empire js](http://empirejs.org/) and there's a
   [great video of him presenting it](http://www.youtube.com/watch?v=GeCWaTML3D0)
+* [d3-geo](http://exposedata.com/talk/d3-geo/#0) by [Kai Chang](https://twitter.com/syntagmatic)
 * [FOSS4G: Beyond](http://macwright.org/presentations/beyond/)
 * [Project It Yourself](http://macwright.org/presentations/projections/#0)
 * [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
