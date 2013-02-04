@@ -37,7 +37,7 @@ today.
 
 ## Open Source
 
-* Big is awesomer because [lambda](https://github.com/lambda) contributed to it! And you can too: it's Public Domain, CC0.
+* Big is awesomer because [lambda](https://github.com/lambda), [mikeall](http://github.com/mikeal), and [BraulioVM](https://github.com/BraulioVM) contributed to it! And you can too: it's Public Domain, CC0.
 * mdznr [has a really cool fork](https://github.com/mdznr/big) with [its own demo](http://mdznr.github.com/big/#0)
 
 ## HTML5
