@@ -70,3 +70,4 @@ The source looks like:
 ## See Also
 
 * [Jed Schmidt's weenote is a awesome big-inspired software](https://github.com/jed/weenote)
+* [bigclicker](https://github.com/tmcw/bigclicker) is a remote control for big
