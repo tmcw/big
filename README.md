@@ -29,9 +29,11 @@ so no conference-wifi-pwn.
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
 * Yours? Post it in issues.
 
-## Themes
+# Stuff that works with big
 
-[big-themes](https://github.com/tmcw/big-themes) ([website](http://macwright.org/big-themes/#0))
+* [bigclicker](https://github.com/tmcw/bigclicker) is a remote control for big
+* [bigpy](https://github.com/harperreed/bigpy) lets you use Markdown with big by implementing it as a pre-processing step in Python
+* [big-themes](https://github.com/tmcw/big-themes) ([website](http://macwright.org/big-themes/#0))
 is a fledgling new repository for big themes. Try one, make one, take one home
 today.
 
@@ -70,4 +72,4 @@ The source looks like:
 ## See Also
 
 * [Jed Schmidt's weenote is a awesome big-inspired software](https://github.com/jed/weenote)
-* [bigclicker](https://github.com/tmcw/bigclicker) is a remote control for big
+
