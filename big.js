@@ -1,10 +1,10 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0;
+    var s = document.getElementsByTagName('div'), cur = 0, prev=0;
     if (!s) return;
     function go(n) {
         cur = n;
         var i = 1e3, e = s[n];
-        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+         s[prev].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
         if (e.firstChild.nodeName === 'IMG') {
@@ -25,11 +25,18 @@ window.onload = function() {
         document.title = e.textContent || e.innerText;
     }
     document.onclick = function() {
+    	prev=cur;
         go(++cur % (s.length));
     };
     document.onkeydown = function(e) {
-        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
-        (e.which === 37) && go(Math.max(0, --cur));
+        if(e.which === 39){
+        	prev=cur;
+        	go(Math.min(s.length - 1, ++cur));
+        }
+        else if(e.which === 37) {
+        	prev=cur;
+        	go(Math.max(0, --cur));
+        }
     };
     function parse_hash() {
         return Math.max(Math.min(
@@ -41,6 +48,6 @@ window.onload = function() {
         var c = parse_hash();
         if (c !== cur) go(c);
     };
-
+   for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
     go(cur);
 };
