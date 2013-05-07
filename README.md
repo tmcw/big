@@ -25,6 +25,7 @@ so no conference-wifi-pwn.
 * [FOSS4G: Beyond](http://macwright.org/presentations/beyond/)
 * [Project It Yourself](http://macwright.org/presentations/projections/#0)
 * [Carto](http://macwright.org/presentations/carto/)
+* [Freeing the DC Code](http://macwright.org/presentations/dccode/)
 * [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
 * Yours? Post it in issues.
