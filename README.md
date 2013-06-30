@@ -1,5 +1,5 @@
 This is a ridiculous presentation system that works great for
-creative, hurried people. See [the demo](http://macwright.org/big)
+creative, hurried people. See [the demo](http://macwright.org/big/demo.html)
 for an example of it working.
 
 It makes text and images as big as they can be, gives you minimal
@@ -17,7 +17,7 @@ so no conference-wifi-pwn.
 
 ## Presentations with Big
 
-* [the demo](http://macwright.org/big)
+* [the demo](http://macwright.org/big/demo.html)
 * [javascript for cats](http://maxogden.github.com/slides/empirejs/index.html#0) by [Max Ogden](http://maxogden.com/) for [empire js](http://empirejs.org/) and there's a
   [great video of him presenting it](http://www.youtube.com/watch?v=GeCWaTML3D0)
 * [d3-geo](http://exposedata.com/talk/d3-geo/#0) by [Kai Chang](https://twitter.com/syntagmatic)

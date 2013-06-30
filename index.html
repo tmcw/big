@@ -1,13 +1,173 @@
-<!DOCTYPE html><html><head><title></title><meta charset='utf-8'><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><link href='big.css' rel='stylesheet' type='text/css' /><script src='big.js'></script></head><body>
-<div>use &harr; to navigate</div>
-<div>Big</div>
-<div><em>Presentation software</em> for busy busy hackers</div>
-<div>+text</div>
-<div>as <em>big</em> as it can be</div>
-<div>no config</div>
-<div><em>1.5k</em></div>
-<div><img src='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg' /> images too</div>
-<div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big: Presentations for Busy Messy Hackers</title>
+    <meta charset='utf-8'>
+    <meta property="og:title" content="Big"/>
+    <meta property="og:description" content="Presentations for Busy Messy Hackers"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <style>
+body {
+    color:#222;
+    max-width:640px;
+    margin:20px auto 50px auto;
+    font:normal 14px/25px 'Helvetica Neue', sans-serif;
+}
+h1 { font-size:140px; line-height:40px;margin-top:140px; }
+h1, h2 {
+    text-align:center;
+}
+.head {
+    color:#fff;
+    background:#000;
+    padding:10px;
+    text-align:right;
+    border:1px solid #000;
+}
+.content {
+    margin:40px 50px 0 50px;
+}
+.buttons {
+    text-align:center;
+    padding:20px 0 20px 0;
+}
+.button {
+    color:#fff;
+    background:#56a;
+    padding:10px 20px;
+    font-size:18px;
+    border-radius:3px;
+    text-decoration:none;
+    margin:0 10px;
+    border-bottom:1px solid #AEB7DD;
+    border-right:1px solid #AEB7DD;
+}
+.button:first-child {
+    background:#586;
+    border-bottom:1px solid #A8D8B3;
+    border-right:1px solid #A8D8B3;
+}
+a {
+    color:blue;
+    text-decoration:none;
+}
+a:hover { text-decoration:underline; }
+ul { list-style-type:none; margin:0; padding:0;}
+li { width:50%;float:left;box-sizing:border-box;border:5px solid #fff; }
+li a {
+    color: #000;
+    display:block;
+    text-decoration:none;
+    padding:15px;
+    background:#fff;
+    transition:background 100ms linear;
+    text-align:center;
+    border-radius:2px;
+    background:#efefef;
+}
+li a:hover { background:#558866; color:#fff; text-decoration:none; }
+.clearfix:after {
+  content:'.';
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+
+.clearfix { display:inline-block; }
+
+pre {
+    padding:10px;
+    background:#e0efe0;
+}
+.gh {
+    display:block;
+    text-align:right;
+}
+    </style>
+</head>
+<body>
+<a class='gh' href='https://github.com/tmcw/big'>(fork || star) on github</a>
+<div class='head'>
+    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=tmcw&repo=big&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+    <h1>Big</h1>
+    <div class='buttons'>
+        <a class='button' href='https://github.com/tmcw/big/archive/gh-pages.zip'>Download</a>
+        <a class='button' href='./demo.html'>Demo</a>
+    </div>
+    <h2>Presentations for Busy Messy Hackers</h2>
+</div>
+
+<div class='content'>
+    <p>
+    Big is a minimal presentation system with a simple rule: the text on every
+    slide is embiggened until it fills your screen.
+    It works pretty okay with focused presentations and plenty of narration,
+    and it will make long bullet-lists look terrible.
+    </p>
+    <p>
+    You create presentations with big by downloading it and editing simple
+    HTML: <code>div</code> elements become slides. You style your presentations
+    with CSS, just like web pages.
+    </p>
+    <p>Then you can either post your slides
+    to GitHub to share with the world, or boot up a local development
+    server to conference-wifi-proof them.
+    </p>
+</div>
+
+<div class='content'>
+    <h2>Quick Start</h2>
+    <pre>curl -L http://bit.ly/big-quick -O index.html
+python -m SimpleHTTPServer</pre>
+    <p>(then open <a href='http://localhost:8000/'>localhost:8000</a>)</p>
+</div>
+
+<div class='content'>
+    <h2>Examples</h2>
+    <ul class='clearfix'>
+        <li><a href="http://exposedata.com/talk/d3-geo/#0">d3-geo</a>
+        <li><a href="http://bdon.org/talk-2013-1-29.html#0">THREE.js + geo</a>
+        <li><a href="http://macwright.org/presentations/beyond/">FOSS4G: Beyond</a></li>
+        <li><a href="http://macwright.org/presentations/projections/#0">Project It Yourself</a></li>
+        <li><a href="http://macwright.org/presentations/carto/">Carto</a></li>
+        <li><a href="http://maxogden.github.com/slides/empirejs/index.html#0">javascript for cats</a>
+        <li><a href="http://macwright.org/presentations/wherecampboston/">WhereCamp Boston</a>
+        <li><a href="http://macwright.org/presentations/foss4g/1.html">foss4g</a></li>
+    </ul>
+</div>
+
+<div class='content'>
+    <h2>Plugins and Riffs</h2>
+    <p>
+    Don't like typing HTML? You can use <a href='http://macwright.org/biggie'>biggie</a>
+    if you want and type Markdown instead. <a href='https://github.com/harperreed/bigpy'>bigpy</a> does
+    it in Python.
+    </p>
+    <p>
+    Don't want to spend time designing stuff? <a href='https://github.com/tmcw/big-themes'>big-themes</a>
+    has some precooked styles.
+    </p>
+    <p>
+    Want something else? Check out <a href='https://github.com/jed/weenote'>Weenote</a>,
+    <a href='http://github.com/mbostock/stack'>stack</a>, and <a href='https://github.com/schacon/showoff'>showoff</a>.
+    There sure are options nowadays.
+    </p>
+</div>
+
+<div class='content'>
+    <h2>Nerd Stuff</h2>
+    <p>
+    Big is 1.1KB and 46 lines long at last count. It's written in vanilla JavaScript
+    with no frameworks and no hijinks. It supports touch and permalinks
+    to individual slide pages. It's licensed PD and is ready for you to hack
+    it into something beautiful or monstrous.
+    </p>
+    <p>
+        Big is awesome because awesome folks have helped out, and you can too:
+        <a href='https://github.com/tmcw/big'>fork big on GitHub!</a>
+    </p>
+</div>
 
 <script type="text/javascript">
   var _gauges = _gauges || [];
