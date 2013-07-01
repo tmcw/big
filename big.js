@@ -1,5 +1,5 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0;
+    var s = document.getElementsByTagName('div'), cur = 0,xStart;
     if (!s) return;
     function go(n) {
         cur = n;
@@ -30,6 +30,14 @@ window.onload = function() {
     document.onkeydown = function(e) {
         (e.which === 39) && go(Math.min(s.length - 1, ++cur));
         (e.which === 37) && go(Math.max(0, --cur));
+    };
+    document.ontouchstart = function(e){
+        xStart = e.changedTouches[0].pageX;
+    };
+    document.ontouchend = function(e){
+        var test = e.changedTouches[0].pageX-xStart;
+        (test < 0) && go(Math.min(s.length - 1, ++cur));
+        (test > 0) && go(Math.max(0, --cur));
     };
     function parse_hash() {
         return Math.max(Math.min(
