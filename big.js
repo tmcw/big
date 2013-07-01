@@ -1,5 +1,5 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0,xStart;
+    var s = document.getElementsByTagName('div'), cur = 0, xStart;
     if (!s) return;
     function go(n) {
         cur = n;
