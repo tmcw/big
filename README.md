@@ -29,6 +29,7 @@ so no conference-wifi-pwn.
 * [Freeing the DC Code](http://macwright.org/presentations/dccode/)
 * [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
+* [Python for Random People](http://isaacjg.github.io/intro_to_python/python_presentation/python_presentation.html#0) by @IsaacJG 
 * Yours? Post it in issues.
 
 # Stuff that works with big
