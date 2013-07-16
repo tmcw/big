@@ -1,5 +1,5 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0, xStart;
+    var s = document.getElementsByTagName('div'), cur = 0;
     if (!s) return;
     function go(n) {
         cur = n;
@@ -24,20 +24,20 @@ window.onload = function() {
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
     }
-    document.onclick = function() {
-        go(++cur % (s.length));
-    };
+    document.onclick = function() { go(++cur % (s.length)); };
+    function fwd() { go(Math.min(s.length - 1, ++cur)); }
+    function rev() { go(Math.max(0, --cur)); }
     document.onkeydown = function(e) {
-        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
-        (e.which === 37) && go(Math.max(0, --cur));
+        if (e.which === 39) fwd();
+        if (e.which === 37) rev();
     };
-    document.ontouchstart = function(e){
-        xStart = e.changedTouches[0].pageX;
-    };
-    document.ontouchend = function(e){
-        var test = e.changedTouches[0].pageX-xStart;
-        (test < 0) && go(Math.min(s.length - 1, ++cur));
-        (test > 0) && go(Math.max(0, --cur));
+    document.ontouchstart = function(e) {
+        var x0 = e.changedTouches[0].pageX;
+        document.ontouchend = function(e) {
+            var x1 = e.changedTouches[0].pageX;
+            if (x1 - x0 < 0) fwd();
+            if (x1 - x0 > 0) rev();
+        };
     };
     function parse_hash() {
         return Math.max(Math.min(
