@@ -32,6 +32,12 @@ div {
   cursor:pointer;
   cursor:hand;
   position:absolute;
-  top:0;
-  left:0;
+  top:0px;
+  left:0px;
+  padding:75px;
+  line-height: 97%;
+}
+
+div.center {
+  text-align: center;
 }
