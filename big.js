@@ -25,7 +25,7 @@ window.onload = function() {
         while (
             e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
-            e.style.fontSize = (i -= 10) + 'px';
+            e.style.fontSize = (i -= i * 0.05) + 'px';
             if (i < 0) break;
         }
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
