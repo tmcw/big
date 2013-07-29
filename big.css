@@ -35,13 +35,13 @@ div {
   top:0px;
   left:0px;
   padding:75px;
-  line-height: 97%;
+  line-height:97%;
 }
 
-div.center{
+div.center {
   text-align:center;
 }
 
-div.imageText{
+div.imageText {
   text-shadow:0px 0px 5px rgba(0,0,0,0.2);
 }
