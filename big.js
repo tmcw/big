@@ -10,6 +10,7 @@ window.onload = function() {
         if (e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
             e.firstChild.style.display = 'none';
+            if ('classList' in e) e.classList.add('imageText');
         } else {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
