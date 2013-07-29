@@ -10,7 +10,6 @@ window.onload = function() {
         if (e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
             e.firstChild.style.display = 'none';
-            e.style.textShadow = "0px 0px 4px rgba(0,0,0,0.17)";
         } else {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
