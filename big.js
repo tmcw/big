@@ -1,9 +1,9 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0;
+    var s = document.getElementsByTagName('div'), cur = 0, ti;
     if (!s) return;
     function go(n) {
         cur = n;
-        var i = 1e3, e = s[n];
+        var i = 1e3, e = s[n], t;
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
@@ -14,6 +14,13 @@ window.onload = function() {
         } else {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
+        }
+        if (ti != undefined) window.clearInterval(ti);
+        t = parseInt(e.getAttribute('time-to-next'));
+        if (!isNaN(t)) {
+            ti = window.setTimeout(function(){
+                fwd();
+            },(t*1000));
         }
         while (
             e.offsetWidth > window.innerWidth ||
