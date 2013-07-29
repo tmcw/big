@@ -24,7 +24,6 @@ window.onload = function() {
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
-        debugger;
     }
     document.onclick = function() { go(++cur % (s.length)); };
     function fwd() { go(Math.min(s.length - 1, ++cur)); }
