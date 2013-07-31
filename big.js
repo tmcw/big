@@ -1,9 +1,9 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0;
+    var s = document.getElementsByTagName('div'), cur = 0, ti;
     if (!s) return;
     function go(n) {
         cur = n;
-        var i = 1e3, e = s[n];
+        var i = 1e3, e = s[n], t;
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
@@ -15,10 +15,15 @@ window.onload = function() {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
+        if (ti != undefined) window.clearInterval(ti);
+        t = parseInt(e.getAttribute('time-to-next') || 0, 10); 
+        if (t > 0) {
+            ti = window.setTimeout(fwd,(t*1000));
+        }
         while (
             e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
-            e.style.fontSize = (i -= 10) + 'px';
+            e.style.fontSize = (i -= i * 0.05) + 'px';
             if (i < 0) break;
         }
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
