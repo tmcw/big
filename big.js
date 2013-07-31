@@ -16,11 +16,9 @@ window.onload = function() {
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti != undefined) window.clearInterval(ti);
-        t = parseInt(e.getAttribute('time-to-next'));
-        if (!isNaN(t)) {
-            ti = window.setTimeout(function(){
-                fwd();
-            },(t*1000));
+        t = parseInt(e.getAttribute('time-to-next') || 0, 10); 
+        if (t > 0) {
+            ti = window.setTimeout(fwd,(t*1000));
         }
         while (
             e.offsetWidth > window.innerWidth ||
