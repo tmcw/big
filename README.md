@@ -15,6 +15,16 @@ This is a **bundle of all JS, CSS, and HTML code** - which means that it's
 a bit harder to update, but there are **no external dependencies** here,
 so no conference-wifi-pwn.
 
+## Slowstart
+
+big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you are very familiar with those languages, you can jump right in. Otherwise, here are some tips:
+
+* When you are working locally you can view your slides by opening your presentation in a browser. Remember to save the file as a `.html`.
+* Use `<div>` & `</div>` around each slide
+* You may be used to `em` displaying as italicized text, but in big emphasized text is green and unitalicized. You can change this default behavior in the header. <em>(Look, Ma-- CSS in action!)</em>
+* Paragraph tags aren't displayed in big. This can be a useful place for you to store your speaking notes. (I don't actually understand this, but I've seen it done)
+
+
 ## Presentations with Big
 
 * [the demo](http://macwright.org/big/demo.html)
