@@ -23,6 +23,7 @@ big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you 
 * Use `<div>` & `</div>` around each slide
 * You may be used to `em` displaying as italicized text, but in big emphasized text is green and unitalicized. You can change this default behavior in the header. <em>(Look, Ma-- CSS in action!)</em>
 * Paragraph tags aren't displayed in big. This can be a useful place for you to store your speaking notes. (I don't actually understand this, but I've seen it done)
+* If you'll have internet access when you present, you can reference images hosted online. If you won't, any images you want to reference will need to be in the same folder as your presentation.
 
 
 ## Presentations with Big
