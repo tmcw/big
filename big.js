@@ -28,7 +28,10 @@ window.onload = function() {
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
     }
-    document.onclick = function() { go(++cur % (s.length)); };
+    document.onclick = function(e) {
+        if (e.metaKey || e.ctrlKey) return true;
+        go(++cur % (s.length));
+    };
     function fwd() { go(Math.min(s.length - 1, ++cur)); }
     function rev() { go(Math.max(0, --cur)); }
     document.onkeydown = function(e) {
