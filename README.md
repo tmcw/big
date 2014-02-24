@@ -83,7 +83,9 @@ The source looks like:
 * If you put an image as the first thing in a slide, it'll become a tiled background. I abused this power in
   [my presentation on project it yourself](http://macwright.org/presentations/projections/#0)
 * You can swipe left & right on mobile devices to go back and forth.
-* If you put something like 'time-to-next="5"' as an attribute in a slide, the slide will pass after 5 seconds.
+
+If you put something like `time-to-next="5"` as an attribute in a slide, the
+slide will pass after 5 seconds - useful for ignite talks.
 
 ## See Also
 
