@@ -33,42 +33,64 @@ div {
   cursor:pointer;
   cursor:hand;
   position:absolute;
-  top:0;
-  left:0;
+  top:0px;
+  left:0px;
+  padding:75px;
+  line-height:97%;
+}
+
+div.center {
+  text-align:center;
+}
+
+div.imageText {
+  text-shadow:0px 0px 5px rgba(0,0,0,0.2);
 }
 </style><script type='text/javascript'>
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0;
+    var s = document.getElementsByTagName('div'), cur = 0, ti;
     if (!s) return;
     function go(n) {
         cur = n;
-        var i = 1e3, e = s[n];
+        var i = 1e3, e = s[n], t;
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
         if (e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
             e.firstChild.style.display = 'none';
+            if ('classList' in e) e.classList.add('imageText');
         } else {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
+        if (ti !== undefined) window.clearInterval(ti);
+        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
+        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
         while (
             e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
-            e.style.fontSize = (i -= 10) + 'px';
+            e.style.fontSize = (i -= 2) + 'px';
             if (i < 0) break;
         }
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
     }
-    document.onclick = function() {
-        go(++cur % (s.length));
-    };
+    document.onclick = function() { go(++cur % (s.length)); };
+    function fwd() { go(Math.min(s.length - 1, ++cur)); }
+    function rev() { go(Math.max(0, --cur)); }
     document.onkeydown = function(e) {
-        (e.which === 39) && go(Math.min(s.length - 1, ++cur));
-        (e.which === 37) && go(Math.max(0, --cur));
+        if (e.which === 39) fwd();
+        if (e.which === 37) rev();
+    };
+    document.ontouchstart = function(e) {
+        var x0 = e.changedTouches[0].pageX;
+        document.ontouchend = function(e) {
+            var x1 = e.changedTouches[0].pageX;
+            if (x1 - x0 < 0) fwd();
+            if (x1 - x0 > 0) rev();
+        };
     };
     function parse_hash() {
         return Math.max(Math.min(
