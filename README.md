@@ -41,6 +41,8 @@ big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you 
 * [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
 * [Python for Random People](http://isaacjg.github.io/intro_to_python/python_presentation/python_presentation.html#0) by @IsaacJG 
+* [Open Data with CouchDB](http://pres.macode.org)
+* [deanbrew](http://dbsgeo.com/deanbrew/#0)
 * Yours? Post it in issues.
 
 # Stuff that works with big
