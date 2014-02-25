@@ -43,6 +43,8 @@ big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you 
 * [Python for Random People](http://isaacjg.github.io/intro_to_python/python_presentation/python_presentation.html#0) by @IsaacJG 
 * [Open Data with CouchDB](http://pres.macode.org)
 * [deanbrew](http://dbsgeo.com/deanbrew/#0)
+* [anatomy of a web map](http://maptime.github.io/anatomy-of-a-web-map/)
+* [intro to web mapping at open data day](http://copystar.github.io/intro-web-mapping-odd14/)
 * Yours? Post it in issues.
 
 # Stuff that works with big
