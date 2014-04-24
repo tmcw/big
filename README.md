@@ -45,6 +45,7 @@ big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you 
 * [deanbrew](http://dbsgeo.com/deanbrew/#0)
 * [anatomy of a web map](http://maptime.github.io/anatomy-of-a-web-map/)
 * [intro to web mapping at open data day](http://copystar.github.io/intro-web-mapping-odd14/)
+* [What is Dat data management?](https://maxogden.github.io/slides/okcon/index.html#0)
 * Yours? Post it in issues.
 
 # Stuff that works with big
