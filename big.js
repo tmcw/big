@@ -4,6 +4,8 @@ window.onload = function() {
     function go(n) {
         cur = n;
         var i = 1e3, e = s[n], t;
+        // if the div has a bodyclass data attribute, add it to the body
+        document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';

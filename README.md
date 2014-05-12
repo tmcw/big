@@ -71,16 +71,20 @@ It's therefore imbued with standardslicious hypeclouds.
 The source looks like:
 
 ```html
-<!DOCTYPE html><html><head><title></title><link href='big.css' rel='stylesheet' type='text/css' /><script src='big.js'></script></head><body>
+<!DOCTYPE html><html><head><title>Big</title><meta charset='utf-8'><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link href='big.css' rel='stylesheet' type='text/css' /><script src='big.js'></script></head><body>
+<div>use &harr; to navigate</div>
 <div>Big</div>
-<div><em>Presentation software</em> for busy busy hackers</div>
-<div>text</div>
+<div class="center"><em>Presentation software</em> for busy busy hackers</div>
+<div>+text</div>
 <div>as <em>big</em> as it can be</div>
+<div time-to-next="3">and now it's perfect for ignite talks (wait 3 seconds)</div>
 <div>no config</div>
 <div><em>1.5k</em></div>
-<div><em>images too</em></div>
-<div><img src='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg' /></div>
+<div><img src='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg' /> images too</div>
+<div data-bodyclass="new-shiny">per slide body classes</div>
 <div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
+</body></html>
 ```
 
 ## 'features'
@@ -88,9 +92,8 @@ The source looks like:
 * If you put an image as the first thing in a slide, it'll become the slide's background. I abused this power in
   [my presentation on project it yourself](http://macwright.org/presentations/projections/#0)
 * You can swipe left & right on mobile devices to go back and forth.
-
-If you put something like `time-to-next="5"` as an attribute in a slide, the
-slide will pass after 5 seconds - useful for ignite talks.
+* Add `time-to-next="5"` as an attribute to a slide and the slide will auto-advance after 5 seconds - useful for ignite talks.
+* Add `data-bodyclass="something"` to add a custom class to the body tag. Useful for making changes to one slide at a time.
 
 ## See Also
 
