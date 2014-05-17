@@ -1,12 +1,13 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0, ti;
-    if (!s) return;
-    function go(n) {
-        cur = n;
-        var i = 1e3, e = s[n], t;
+    big = {};
+    big.s = document.getElementsByTagName('div'), big.cur = 0, big.ti;
+    if (!big.s) return;
+    big.go = function(n) {
+        big.cur = n;
+        var i = 1e3, e = big.s[n], t;
         // if the div has a bodyclass data attribute, add it to the body
         document.body.className = e.dataset.bodyclass || '';
-        for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
+        for (var k = 0; k < big.s.length; k++) big.s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
         if (e.firstChild.nodeName === 'IMG') {
@@ -17,9 +18,9 @@ window.onload = function() {
             document.body.style.backgroundImage = '';
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
-        if (ti !== undefined) window.clearInterval(ti);
+        if (big.ti !== undefined) window.clearInterval(big.ti);
         t = parseInt(e.dataset.timeToNext || 0, 10);
-        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
+        if (t > 0) big.ti = window.setTimeout(big.fwd, (t * 1000));
         while (
             e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
@@ -29,31 +30,31 @@ window.onload = function() {
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
-    }
-    document.onclick = function() { go(++cur % (s.length)); };
-    fwd = function() { go(Math.min(s.length - 1, ++cur)); };
-    rev = function() { go(Math.max(0, --cur)); };
+    };
+    document.onclick = function() { big.go(++cur % (big.s.length)); };
+    big.fwd = function() { big.go(Math.min(big.s.length - 1, ++big.cur)); };
+    big.rev = function() { big.go(Math.max(0, --big.cur)); };
     document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 37) rev();
+        if (e.which === 39) big.fwd();
+        if (e.which === 37) big.rev();
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
         document.ontouchend = function(e) {
             var x1 = e.changedTouches[0].pageX;
-            if (x1 - x0 < 0) fwd();
-            if (x1 - x0 > 0) rev();
+            if (x1 - x0 < 0) big.fwd();
+            if (x1 - x0 > 0) big.rev();
         };
     };
-    function parse_hash() {
+    big.parse_hash = function() {
         return Math.max(Math.min(
-            s.length - 1,
+            big.s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
-    }
-    if (window.location.hash) cur = parse_hash() || cur;
-    window.onhashchange = function() {
-        var c = parse_hash();
-        if (c !== cur) go(c);
     };
-    go(cur);
+    if (window.location.hash) big.cur = big.parse_hash() || big.cur;
+    window.onhashchange = function() {
+        var c = big.parse_hash();
+        if (c !== big.cur) big.go(c);
+    };
+    big.go(big.cur);
 };
