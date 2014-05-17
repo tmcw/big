@@ -18,7 +18,7 @@ window.onload = function() {
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti !== undefined) window.clearInterval(ti);
-        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
+        t = parseInt(e.dataset.timeToNext || 0, 10);
         if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
         while (
             e.offsetWidth > window.innerWidth ||
@@ -55,6 +55,5 @@ window.onload = function() {
         var c = parse_hash();
         if (c !== cur) go(c);
     };
-
     go(cur);
 };
