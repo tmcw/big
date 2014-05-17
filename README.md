@@ -40,7 +40,7 @@ big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you 
 * [Freeing the DC Code](http://macwright.org/presentations/dccode/)
 * [WhereCamp Boston](http://macwright.org/presentations/wherecampboston/) (big alpha)
 * [foss4g](http://macwright.org/presentations/foss4g/1.html) (big alpha)
-* [Python for Random People](http://isaacjg.github.io/intro_to_python/python_presentation/python_presentation.html#0) by @IsaacJG 
+* [Python for Random People](http://isaacjg.github.io/intro_to_python/python_presentation/python_presentation.html#0) by @IsaacJG
 * [Open Data with CouchDB](http://pres.macode.org)
 * [deanbrew](http://dbsgeo.com/deanbrew/#0)
 * [anatomy of a web map](http://maptime.github.io/anatomy-of-a-web-map/)
@@ -78,7 +78,7 @@ The source looks like:
 <div class="center"><em>Presentation software</em> for busy busy hackers</div>
 <div>+text</div>
 <div>as <em>big</em> as it can be</div>
-<div time-to-next="3">and now it's perfect for ignite talks (wait 3 seconds)</div>
+<div data-time-to-next="3">and now it's perfect for ignite talks (wait 3 seconds)</div>
 <div>no config</div>
 <div><em>1.5k</em></div>
 <div><img src='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg' /> images too</div>
@@ -92,7 +92,7 @@ The source looks like:
 * If you put an image as the first thing in a slide, it'll become the slide's background. I abused this power in
   [my presentation on project it yourself](http://macwright.org/presentations/projections/#0)
 * You can swipe left & right on mobile devices to go back and forth.
-* Add `time-to-next="5"` as an attribute to a slide and the slide will auto-advance after 5 seconds - useful for ignite talks.
+* Add `data-time-to-next="5"` as an attribute to a slide and the slide will auto-advance after 5 seconds - useful for ignite talks.
 * Add `data-bodyclass="something"` to add a custom class to the body tag. Useful for making changes to one slide at a time.
 
 ## See Also
