@@ -31,8 +31,8 @@ window.onload = function() {
         document.title = e.textContent || e.innerText;
     }
     document.onclick = function() { go(++cur % (s.length)); };
-    function fwd() { go(Math.min(s.length - 1, ++cur)); }
-    function rev() { go(Math.max(0, --cur)); }
+    fwd = function() { go(Math.min(s.length - 1, ++cur)); };
+    rev = function() { go(Math.max(0, --cur)); };
     document.onkeydown = function(e) {
         if (e.which === 39) fwd();
         if (e.which === 37) rev();
