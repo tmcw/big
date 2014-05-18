@@ -3,7 +3,7 @@ window.onload = function() {
     big.cur = 0;
     var s = document.getElementsByTagName('div'), ti;
     if (!s) return;
-    go = function(n) {
+    function go(n) {
         big.cur = n;
         var i = 1e3, e = s[n], t;
         // if the div has a bodyclass data attribute, add it to the body
@@ -31,7 +31,7 @@ window.onload = function() {
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
-    };
+    }
     document.onclick = function() { go(++big.cur % (s.length)); };
     big.fwd = function() { go(Math.min(s.length - 1, ++big.cur)); };
     big.rev = function() { go(Math.max(0, --big.cur)); };
@@ -47,14 +47,14 @@ window.onload = function() {
             if (x1 - x0 > 0) big.rev();
         };
     };
-    big.parse_hash = function() {
+    function parse_hash() {
         return Math.max(Math.min(
             s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
-    };
-    if (window.location.hash) big.cur = big.parse_hash() || big.cur;
+    }
+    if (window.location.hash) big.cur = parse_hash() || big.cur;
     window.onhashchange = function() {
-        var c = big.parse_hash();
+        var c = parse_hash();
         if (c !== big.cur) go(c);
     };
     go(big.cur);
