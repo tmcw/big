@@ -17,14 +17,20 @@ so no conference-wifi-pwn.
 
 ## Slowstart
 
-big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you are very familiar with those languages, you can jump right in. Otherwise, here are some tips:
+big makes sense if you're very comfortable in JavaScript, CSS, and HTML.
+If you are very familiar with those languages, you can jump right in.
+Otherwise, here are some tips:
 
-* When you are working locally you can view your slides by opening your presentation in a browser. Remember to save the file as a `.html`.
+* When you are working locally you can view your slides by opening your
+  presentation in a browser. Remember to save the file as a `.html`.
 * Use `<div>` & `</div>` around each slide
-* You may be used to `em` displaying as italicized text, but in big emphasized text is green and unitalicized. You can change this default behavior in the header. <em>(Look, Ma-- CSS in action!)</em>
-* Paragraph tags aren't displayed in big. This can be a useful place for you to store your speaking notes. (I don't actually understand this, but I've seen it done)
-* If you'll have internet access when you present, you can reference images hosted online. If you won't, any images you want to reference will need to be in the same folder as your presentation.
-
+* You may be used to `em` displaying as italicized text, but in big emphasized
+  text is green and unitalicized. You can change this default behavior in the header. <em>(Look, Ma-- CSS in action!)</em>
+* Paragraph tags aren't displayed in big. This can be a useful place for you
+  to store your speaking notes. (I don't actually understand this, but I've seen it done)
+* If you'll have internet access when you present, you can reference images
+  hosted online. If you won't, any images you want to reference will need to
+  be in the same folder as your presentation.
 
 ## Presentations with Big
 
@@ -50,7 +56,6 @@ big makes sense if you're very comfortable in JavaScript, CSS, and HTML. If you 
 
 # Stuff that works with big
 
-* [bigclicker](https://github.com/tmcw/bigclicker) is a remote control for big
 * [bigpy](https://github.com/harperreed/bigpy) lets you use Markdown with big by implementing it as a pre-processing step in Python
 * [big-themes](https://github.com/tmcw/big-themes) ([website](http://macwright.org/big-themes/#0))
 is a fledgling new repository for big themes. Try one, make one, take one home
@@ -58,8 +63,10 @@ today.
 
 ## Open Source
 
-* Big is awesomer because [lambda](https://github.com/lambda), [mikeal](http://github.com/mikeal), and [BraulioVM](https://github.com/BraulioVM) contributed to it! And you can too: it's Public Domain, CC0.
-* mdznr [has a really cool fork](https://github.com/mdznr/big) with [its own demo](http://mdznr.github.com/big/#0)
+* Big is awesomer because [lots of people](https://github.com/tmcw/big/graphs/contributors)
+  contributed to it! And you can too: it's Public Domain, CC0.
+* mdznr [has a really cool fork](https://github.com/mdznr/big)
+  with [its own demo](http://mdznr.github.com/big/#0)
 
 ## HTML5
 
