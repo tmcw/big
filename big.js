@@ -1,10 +1,12 @@
 window.onload = function() {
-    var s = document.getElementsByTagName('div'), cur = 0, ti;
+    var s = document.getElementsByTagName('div'), cur = 0, ti, fk, rk;
     if (!s) return;
+    fk = [39].concat(window.fwdKeys||[]); // append to default key events for "forward"
+    rk = [37].concat(window.revKeys||[]); // append to default key events for "reverse"
+    var howdy;
     function go(n) {
         cur = n;
         var i = 1e3, e = s[n], t;
-        // if the div has a bodyclass data attribute, add it to the body
         document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
@@ -34,8 +36,8 @@ window.onload = function() {
     function fwd() { go(Math.min(s.length - 1, ++cur)); }
     function rev() { go(Math.max(0, --cur)); }
     document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 37) rev();
+        if (fk.indexOf(e.which) >= 0) fwd();
+        if (rk.indexOf(e.which) >= 0) rev();
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;

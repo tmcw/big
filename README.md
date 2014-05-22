@@ -94,13 +94,18 @@ The source looks like:
 </body></html>
 ```
 
-## 'features'
+## Features
 
 * If you put an image as the first thing in a slide, it'll become the slide's background. I abused this power in
   [my presentation on project it yourself](http://macwright.org/presentations/projections/#0)
 * You can swipe left & right on mobile devices to go back and forth.
 * Add `data-time-to-next="5"` as an attribute to a slide and the slide will auto-advance after 5 seconds - useful for ignite talks.
 * Add `data-bodyclass="something"` to add a custom class to the body tag. Useful for making changes to one slide at a time.
+* Do you want Big to support your presenter remote?
+    * Determine [which keyDown codes](http://www.asquare.net/javascript/tests/KeyCode.html) are being broadcast by your remote for forward and reverse.
+    * Add an array of those keycodes to your HTML file:
+    *   `var fwdKeys = [79], revKeys = [81];`
+    * Test!
 
 ## See Also
 
