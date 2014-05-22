@@ -3,7 +3,6 @@ window.onload = function() {
     if (!s) return;
     fk = [39].concat(window.fwdKeys||[]); // append to default key events for "forward"
     rk = [37].concat(window.revKeys||[]); // append to default key events for "reverse"
-    var howdy;
     function go(n) {
         cur = n;
         var i = 1e3, e = s[n], t;
