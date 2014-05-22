@@ -9,7 +9,7 @@ window.onload = function() {
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
-        if (e.firstChild.nodeName === 'IMG') {
+        if (e.firstChild && e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
             e.firstChild.style.display = 'none';
             if ('classList' in e) e.classList.add('imageText');
