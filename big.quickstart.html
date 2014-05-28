@@ -53,10 +53,11 @@ window.onload = function() {
     function go(n) {
         cur = n;
         var i = 1e3, e = s[n], t;
+        document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
-        if (e.firstChild.nodeName === 'IMG') {
+        if (e.firstChild && e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
             e.firstChild.style.display = 'none';
             if ('classList' in e) e.classList.add('imageText');
@@ -65,7 +66,7 @@ window.onload = function() {
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti !== undefined) window.clearInterval(ti);
-        t = parseInt(e.getAttribute('time-to-next') || 0, 10);
+        t = parseInt(e.dataset.timeToNext || 0, 10);
         if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
         while (
             e.offsetWidth > window.innerWidth ||
@@ -81,8 +82,8 @@ window.onload = function() {
     function fwd() { go(Math.min(s.length - 1, ++cur)); }
     function rev() { go(Math.max(0, --cur)); }
     document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 37) rev();
+        if (e.which === 39 || e.which === 34 || e.which === 40) fwd();
+        if (e.which === 37 || e.which === 33 || e.which === 38) rev();
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
@@ -102,7 +103,6 @@ window.onload = function() {
         var c = parse_hash();
         if (c !== cur) go(c);
     };
-
     go(cur);
 };
 </script></head><body>

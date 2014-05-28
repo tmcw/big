@@ -1,17 +1,15 @@
 window.onload = function() {
-    big = {};
-    big.cur = 0;
+    big = { current: 0 };
     var s = document.getElementsByTagName('div'), ti;
     if (!s) return;
     function go(n) {
-        big.cur = n;
-        var i = 1e3, e = s[n], t;
-        // if the div has a bodyclass data attribute, add it to the body
+        big.current = n;
+        var i = 1e3, e = s[n], t = parseInt(e.dataset.timeToNext || 0, 10);
         document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
         e.style.fontSize = i + 'px';
-        if (e.firstChild.nodeName === 'IMG') {
+        if (e.firstChild && e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url(' + e.firstChild.src + ')';
             e.firstChild.style.display = 'none';
             if ('classList' in e) e.classList.add('imageText');
@@ -20,10 +18,8 @@ window.onload = function() {
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti !== undefined) window.clearInterval(ti);
-        t = parseInt(e.dataset.timeToNext || 0, 10);
         if (t > 0) ti = window.setTimeout(big.fwd, (t * 1000));
-        while (
-            e.offsetWidth > window.innerWidth ||
+        while (e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
             e.style.fontSize = (i -= 2) + 'px';
             if (i < 0) break;
@@ -32,12 +28,12 @@ window.onload = function() {
         if (window.location.hash !== n) window.location.hash = n;
         document.title = e.textContent || e.innerText;
     }
-    document.onclick = function() { go(++big.cur % (s.length)); };
-    big.fwd = function() { go(Math.min(s.length - 1, ++big.cur)); };
-    big.rev = function() { go(Math.max(0, --big.cur)); };
+    document.onclick = function() { go(++big.current % (s.length)); };
+    big.fwd = function() { go(Math.min(s.length - 1, ++big.current)); };
+    big.rev = function() { go(Math.max(0, --big.current)); };
     document.onkeydown = function(e) {
-        if (e.which === 39) big.fwd();
-        if (e.which === 37) big.rev();
+        if (e.which === 39 || e.which === 34 || e.which === 40) big.fwd();
+        if (e.which === 37 || e.which === 33 || e.which === 38) big.rev();
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
@@ -48,14 +44,13 @@ window.onload = function() {
         };
     };
     function parse_hash() {
-        return Math.max(Math.min(
-            s.length - 1,
+        return Math.max(Math.min(s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
     }
-    if (window.location.hash) big.cur = parse_hash() || big.cur;
+    if (window.location.hash) big.current = parse_hash() || big.current;
     window.onhashchange = function() {
         var c = parse_hash();
-        if (c !== big.cur) go(c);
+        if (c !== big.current) go(c);
     };
-    go(big.cur);
+    go(big.current);
 };
