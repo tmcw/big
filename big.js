@@ -4,7 +4,6 @@ window.onload = function() {
     function go(n) {
         cur = n;
         var i = 1e3, e = s[n], t;
-        // if the div has a bodyclass data attribute, add it to the body
         document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
@@ -34,8 +33,8 @@ window.onload = function() {
     function fwd() { go(Math.min(s.length - 1, ++cur)); }
     function rev() { go(Math.max(0, --cur)); }
     document.onkeydown = function(e) {
-        if (e.which === 39) fwd();
-        if (e.which === 37) rev();
+        if (e.which === 39 || e.which === 34 || e.which === 40) fwd();
+        if (e.which === 37 || e.which === 33 || e.which === 38) rev();
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
