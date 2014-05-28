@@ -3,7 +3,7 @@ window.onload = function() {
     if (!s) return;
     function go(n) {
         cur = n;
-        var i = 1e3, e = s[n], t;
+        var i = 1e3, e = s[n], t = parseInt(e.dataset.timeToNext || 0, 10);
         document.body.className = e.dataset.bodyclass || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
@@ -17,10 +17,8 @@ window.onload = function() {
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti !== undefined) window.clearInterval(ti);
-        t = parseInt(e.dataset.timeToNext || 0, 10);
         if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
-        while (
-            e.offsetWidth > window.innerWidth ||
+        while (e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
             e.style.fontSize = (i -= 2) + 'px';
             if (i < 0) break;
@@ -45,8 +43,7 @@ window.onload = function() {
         };
     };
     function parse_hash() {
-        return Math.max(Math.min(
-            s.length - 1,
+        return Math.max(Math.min(s.length - 1,
             parseInt(window.location.hash.substring(1), 10)), 0);
     }
     if (window.location.hash) cur = parse_hash() || cur;
