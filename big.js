@@ -1,7 +1,7 @@
 window.onload = function() {
-    big = { current: 0 };
     var s = document.getElementsByTagName('div'), ti;
     if (!s) return;
+    big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
     function go(n) {
         big.current = n;
         var i = 1e3, e = s[n], t = parseInt(e.dataset.timeToNext || 0, 10);
@@ -18,7 +18,7 @@ window.onload = function() {
             document.body.style.backgroundColor = e.style.backgroundColor;
         }
         if (ti !== undefined) window.clearInterval(ti);
-        if (t > 0) ti = window.setTimeout(big.fwd, (t * 1000));
+        if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
         while (e.offsetWidth > window.innerWidth ||
             e.offsetHeight > window.innerHeight) {
             e.style.fontSize = (i -= 2) + 'px';
@@ -29,18 +29,18 @@ window.onload = function() {
         document.title = e.textContent || e.innerText;
     }
     document.onclick = function() { go(++big.current % (s.length)); };
-    big.fwd = function() { go(Math.min(s.length - 1, ++big.current)); };
-    big.rev = function() { go(Math.max(0, --big.current)); };
+    function fwd() { go(Math.min(s.length - 1, ++big.current)); }
+    function rev() { go(Math.max(0, --big.current)); }
     document.onkeydown = function(e) {
-        if (e.which === 39 || e.which === 34 || e.which === 40) big.fwd();
-        if (e.which === 37 || e.which === 33 || e.which === 38) big.rev();
+        if (e.which === 39 || e.which === 34 || e.which === 40) fwd();
+        if (e.which === 37 || e.which === 33 || e.which === 38) rev();
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
         document.ontouchend = function(e) {
             var x1 = e.changedTouches[0].pageX;
-            if (x1 - x0 < 0) big.fwd();
-            if (x1 - x0 > 0) big.rev();
+            if (x1 - x0 < 0) fwd();
+            if (x1 - x0 > 0) rev();
         };
     };
     function parse_hash() {

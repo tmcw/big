@@ -79,6 +79,16 @@ A slide that changes the body tag's class to 'minard'
 * Add `data-time-to-next="5"` as an attribute to a slide and the slide will auto-advance after 5 seconds - useful for ignite talks.
 * Add `data-bodyclass="something"` to add a custom class to the body tag. Useful for making changes to one slide at a time.
 
+## JavaScript API
+
+big exposes a JavaScript API via the `big` object:
+
+* `big.current`: the current slide as a number between `0` and `big.length`
+* `big.length`: the number of slides
+* `big.forward()`: go forward 1 slide. at the last slide, do nothing.
+* `big.reverse()`: go back 1 slide. at the first slide, do nothing.
+* `big.go(number)`: go to a specific slide, given its number.
+
 ## Presentations with Big
 
 * [the demo](http://macwright.org/big/demo.html)
