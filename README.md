@@ -3,7 +3,7 @@ creative, hurried people. See [the demo](http://macwright.org/big/demo.html)
 for an example of it working.
 
 It makes text and images as big as they can be, gives you minimal
-styling (`em`), and gives you left/right arrows for navigation.
+styling (`em`) and keyboard controls for navigation.
 
 ## Quickstart
 
@@ -17,7 +17,7 @@ so no conference-wifi-pwn.
 
 ## Slowstart
 
-big makes sense if you're very comfortable in JavaScript, CSS, and HTML.
+big makes sense if you're comfortable with JavaScript, CSS, and HTML.
 If you are very familiar with those languages, you can jump right in.
 Otherwise, here are some tips:
 
@@ -37,8 +37,16 @@ Otherwise, here are some tips:
 A full presentation looks like:
 
 ```html
-<!DOCTYPE html><html><head><title>Big</title><meta charset='utf-8'><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<link href='big.css' rel='stylesheet' type='text/css' /><script src='big.js'></script></head><body>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Big</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <link href='big.css' rel='stylesheet' type='text/css' />
+  <script src='big.js'></script>
+</head>
+<body>
 <div>use &harr; to navigate</div>
 <div>Big</div>
 <div class="center"><em>Presentation software</em> for busy busy hackers</div>
@@ -50,7 +58,8 @@ A full presentation looks like:
 <div><img src='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg' /> images too</div>
 <div data-bodyclass="new-shiny">per slide body classes</div>
 <div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
-</body></html>
+</body>
+</html>
 ```
 
 Here's how you write a single slide
@@ -131,4 +140,3 @@ today.
 ## See Also
 
 * [Jed Schmidt's weenote is a awesome big-inspired software](https://github.com/jed/weenote)
-
