@@ -19,10 +19,9 @@ window.onload = function() {
         }
         if (ti !== undefined) window.clearInterval(ti);
         if (t > 0) ti = window.setTimeout(fwd, (t * 1000));
-        while (e.offsetWidth > window.innerWidth ||
-            e.offsetHeight > window.innerHeight) {
+        while ((e.offsetWidth > window.innerWidth ||
+            e.offsetHeight > window.innerHeight) && i >= 0) {
             e.style.fontSize = (i -= 2) + 'px';
-            if (i < 0) break;
         }
         e.style.marginTop = ((window.innerHeight - e.offsetHeight) / 2) + 'px';
         if (window.location.hash !== n) window.location.hash = n;
