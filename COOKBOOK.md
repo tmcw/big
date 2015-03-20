@@ -115,3 +115,44 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 ```
+
+## Backgrounds
+
+By default, `big` has a plain white background. If you make an image the first
+thing in a slide, then it'll make that image the background image of the slide -
+it's just a convenient little shortcut.
+
+Note that making the image the first thing in a slide means that the element
+must **go directly after the `<div>` tag with no space**. Whitespace in HTML
+is an element, too - a TextNode.
+
+Anyway - by default, big has the rule `background-size:100%;` set on slides.
+This means that the background will be positioned to fit _within_ the slide's
+dimensions. This isn't always what you want - for instance, if your background
+is like an "image of the stars" and you don't terribly mind part of it
+getting cut off but do definitely want it to cover the whole slide, you can
+change that rule in `big.css` to
+
+```css
+body {
+    background-size: cover;
+}
+```
+
+And sometimes you want more control than that: let's say that you have
+one slide that you want a [patterned background](http://www.macwright.org/presentations/projections/#0)
+under, but a bunch that you don't. For this you can use the bodyclass feature,
+in conjunction with a class that triggers repeating background images scaled
+at their native size:
+
+```css
+body.background-repeat {
+    background-size: auto;
+    background-repeat: repeat;
+}
+```
+
+```html
+<div data-bodyclass='background-repeat'><img src='background-pattern.png' />
+</div>
+```
