@@ -1,11 +1,12 @@
 window.onload = function() {
     var s = document.getElementsByTagName('div'), ti;
     if (!s) return;
-    big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
+    var big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
+    window.big = big;
     function resize() {
         var w = window.innerWidth, h = window.innerHeight, e = s[big.current];
         e.style.fontSize = h + 'px';
-        for (var i = h-2; e.offsetWidth > w || e.offsetHeight > h; i-=2) {
+        for (var i = h - 2; e.offsetWidth > w || e.offsetHeight > h; i -= 2) {
             e.style.fontSize = i + 'px';
         }
         e.style.marginTop = ((h - e.offsetHeight) / 2) + 'px';
@@ -39,8 +40,8 @@ window.onload = function() {
     };
     document.ontouchstart = function(e) {
         var x0 = e.changedTouches[0].pageX;
-        document.ontouchend = function(e) {
-            var x1 = e.changedTouches[0].pageX;
+        document.ontouchend = function(e2) {
+            var x1 = e2.changedTouches[0].pageX;
             if (x1 - x0 < 0) fwd();
             if (x1 - x0 > 0) rev();
         };
