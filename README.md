@@ -128,6 +128,7 @@ big exposes a JavaScript API via the `big` object:
 
 # Stuff that works with big
 
+* [big-printer](https://github.com/tmcw/big-printer) exports Big presentations to PDF & PNG
 * [Draft](https://draftin.com/), a version control and collaboration tool for writers, uses big for its presentation mode
 * [bigout](https://github.com/abenrob/bigout) exports big presentations to PDF
 * [Slidepad](http://slidepad.herokuapp.com/), a docpad server, supports big
