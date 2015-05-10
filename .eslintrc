@@ -1,0 +1,15 @@
+{
+    "rules": {
+        "curly": [0],
+        "strict": [0],
+        "no-console": [0],
+        "camelcase": [0],
+        "no-use-before-define": [0],
+        "quotes": [2, "single"]
+    },
+    "globals": {
+        "window": true,
+        "console": true,
+        "document": true
+      }
+}
