@@ -156,3 +156,27 @@ body.background-repeat {
 <div data-bodyclass='background-repeat'><img src='background-pattern.png' />
 </div>
 ```
+
+## Speakers Notes
+
+What if you want to store some commentary and hints for your presentation, like
+_speakers notes_? Let's say that your slide looks like
+
+```html
+<div>
+  Complicated topic
+</div>
+```
+
+Add a `notes` element
+
+```html
+<div>
+  Complicated topic
+  <notes>This topic is complicated, but really it's just a kind of tensor</notes>
+</div>
+```
+
+Then open your [developer console](http://debugbrowser.com/), and you'll see your
+speaker notes in it when you visit that slide! In most browsers, the console is detachable,
+too, so you can move it to a different screen or window when you're giving the presentation.

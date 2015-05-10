@@ -13,10 +13,12 @@ window.onload = function() {
     }
     function go(n) {
         big.current = n;
-        var e = s[n], t = parseInt(e.dataset.timeToNext || 0, 10);
-        document.body.className = e.dataset.bodyclass || '';
+        var e = s[n], t = parseInt(e.getAttribute('data-timeToNext') || 0, 10),
+            notes = e.getElementsByTagName('notes');
+        document.body.className = e.getAttribute('data-bodyclass') || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
+        for (k = 0; typeof console === 'object' && k < notes.length; k++) console.log('%c%s: %s', 'padding:5px;font-family:serif;font-size:18px;line-height:150%;', n, notes[k].innerHTML.trim());
         if (e.firstChild && e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url("' + e.firstChild.src + '")';
             e.firstChild.style.display = 'none';

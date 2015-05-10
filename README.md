@@ -87,6 +87,9 @@ A slide that changes the body tag's class to 'minard'
 * You can swipe left & right on mobile devices to go back and forth.
 * Add `data-time-to-next="5"` as an attribute to a slide and the slide will auto-advance after 5 seconds - useful for ignite talks.
 * Add `data-bodyclass="something"` to add a custom class to the body tag. Useful for making changes to one slide at a time.
+* Add `<notes>Write your speakers notes here</notes>` in a slide to add speakers notes.
+  These notes will appear in your web developer console when you go to
+  the slide.
 
 ## Protips
 

@@ -1,0 +1,28 @@
+{
+  "name": "big",
+  "version": "1.0.0",
+  "description": "a presentation system for busy messy hackers",
+  "main": "big.js",
+  "scripts": {
+    "test": "eslint big.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmcw/big.git"
+  },
+  "keywords": [
+    "big",
+    "presentation",
+    "system",
+    "slides"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmcw/big/issues"
+  },
+  "homepage": "https://github.com/tmcw/big#readme",
+  "devDependencies": {
+    "eslint": "^0.21.0"
+  }
+}

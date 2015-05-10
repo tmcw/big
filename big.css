@@ -1,5 +1,5 @@
 body {
-  font-family: 'Helvetica';
+  font-family:'Helvetica';
   letter-spacing:-5px;
   background:#000;
   background-size:100%;
@@ -19,7 +19,7 @@ em, a {
 }
 
 a {
-  background: #34d0e7;
+  background:#34d0e7;
   color:#000;
   text-decoration:none;
 }
@@ -44,4 +44,8 @@ div.center {
 
 div.imageText {
   text-shadow:0px 0px 5px rgba(0,0,0,0.2);
+}
+
+notes {
+    display:none;
 }
