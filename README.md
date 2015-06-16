@@ -129,6 +129,7 @@ big exposes a JavaScript API via the `big` object:
 * [What is Dat data management?](https://maxogden.github.io/slides/okcon/index.html#0)
 * [Sam Franklin on Open Source GIS at OSGIS](http://samfranklin.github.io/osgis2014/)
 * [Ryan Cooper's  "Where's the Story?" from KYGIS2014](http://ryan-m-cooper.com/kygis2014/)
+* [Web Maps Without Web Maps @ SOTM by Tyler Dahlberg](http://tdahlberg.github.io/somworkshop2015/)
 * Yours? Post it in issues.
 
 # Stuff that works with big
