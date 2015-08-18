@@ -59,7 +59,7 @@ window.onload = function() {
     function resize() {
         var w = window.innerWidth, h = window.innerHeight, e = s[big.current];
         e.style.fontSize = h + 'px';
-        for (var i = h - 2; e.offsetWidth > w || e.offsetHeight > h; i -= 2) {
+        for (var i = h - 2; i > 0 && (e.offsetWidth > w || e.offsetHeight > h); i -= 2) {
             e.style.fontSize = i + 'px';
         }
         e.style.marginTop = ((h - e.offsetHeight) / 2) + 'px';
