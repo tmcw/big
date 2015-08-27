@@ -1,5 +1,6 @@
 window.onload = function() {
     var s = document.getElementsByTagName('div'), ti;
+    for (var k = 0; k < s.length; k++) {s[k].setAttribute('tabindex', 0);}
     if (!s) return;
     var big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
     window.big = big;
@@ -18,6 +19,7 @@ window.onload = function() {
         document.body.className = e.getAttribute('data-bodyclass') || '';
         for (var k = 0; k < s.length; k++) s[k].style.display = 'none';
         e.style.display = 'inline';
+        e.focus();
         for (k = 0; typeof console === 'object' && k < notes.length; k++) console.log('%c%s: %s', 'padding:5px;font-family:serif;font-size:18px;line-height:150%;', n, notes[k].innerHTML.trim());
         if (e.firstChild && e.firstChild.nodeName === 'IMG') {
             document.body.style.backgroundImage = 'url("' + e.firstChild.src + '")';
