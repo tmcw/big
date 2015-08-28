@@ -1,6 +1,6 @@
 window.onload = function() {
     var s = document.getElementsByTagName('div'), ti;
-    for (var k = 0; k < s.length; k++) {s[k].setAttribute('tabindex', 0);}
+    for (var k = 0; k < s.length; k++) s[k].setAttribute('tabindex', 0);
     if (!s) return;
     var big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
     window.big = big;
