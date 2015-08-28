@@ -49,3 +49,8 @@ div.imageText {
 notes {
     display:none;
 }
+/* normally not good, but ok in context of full screen directional navigation */
+:focus {
+    outline: 0;
+}
+
