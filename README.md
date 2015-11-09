@@ -107,6 +107,12 @@ big exposes a JavaScript API via the `big` object:
 * `big.reverse()`: go back 1 slide. at the first slide, do nothing.
 * `big.go(number)`: go to a specific slide, given its number.
 
+## Installation with `npm`
+
+big is available on `npm` as the `big-presentation` package.
+
+    npm install --save big-presentation
+
 ## Presentations with Big
 
 * [the demo](http://macwright.org/big/demo.html)
