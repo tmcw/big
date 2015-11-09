@@ -1,16 +1,27 @@
 {
     "rules": {
-        "curly": [0],
-        "strict": [0],
-        "no-console": [0],
-        "no-extra-parens": [2],
-        "camelcase": [0],
-        "no-use-before-define": [0],
-        "quotes": [2, "single"]
+        "indent": [
+            2,
+            4
+        ],
+        "no-console": [
+            0
+        ],
+        "quotes": [
+            2,
+            "single"
+        ],
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+        "semi": [
+            2,
+            "always"
+        ]
     },
-    "globals": {
-        "window": true,
-        "console": true,
-        "document": true
-      }
+    "env": {
+        "browser": true
+    },
+    "extends": "eslint:recommended"
 }

@@ -1,5 +1,5 @@
 {
-  "name": "big",
+  "name": "big-presentation",
   "version": "1.0.1",
   "description": "a presentation system for busy messy hackers",
   "main": "big.js",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
-    "eslint": "^0.21.0"
+    "eslint": "^1.9.0"
   }
 }
