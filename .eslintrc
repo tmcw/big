@@ -2,7 +2,7 @@
     "rules": {
         "indent": [
             2,
-            4
+            2
         ],
         "no-console": [
             0
