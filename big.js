@@ -1,7 +1,7 @@
 window.onload = function() {
   var s = document.getElementsByTagName('div'), ti, i;
   for (i = 0; i < s.length; i++) s[i].setAttribute('tabindex', 0);
-  if (!s) return;
+  if (!s.length) return;
   var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
   function resize() {
     var w = window.innerWidth, h = window.innerHeight, e = s[big.current];
