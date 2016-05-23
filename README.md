@@ -148,7 +148,6 @@ big is available on `npm` as the `big-presentation` package.
 * [big-themes](https://github.com/tmcw/big-themes) ([website](http://macwright.org/big-themes/#0))
 is a fledgling new repository for big themes. Try one, make one, take one home
 today.
-* [big-gist](http://big.artemis.cat/) is a tool to create presentations even faster, using Markdown and GitHub Gists
 
 ## Open Source
 
