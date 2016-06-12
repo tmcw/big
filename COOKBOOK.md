@@ -180,3 +180,17 @@ Add a `notes` element
 Then open your [developer console](http://debugbrowser.com/), and you'll see your
 speaker notes in it when you visit that slide! In most browsers, the console is detachable,
 too, so you can move it to a different screen or window when you're giving the presentation.
+
+## Centered images
+
+You can center a slide on an image with CSS, the same way you center images on webpages.
+
+```css
+.center-image {
+    background-position: top center;
+}
+```
+
+```html
+<div data-bodyclass="center-image">per slide body classes</div>
+```
