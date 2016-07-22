@@ -17,7 +17,7 @@ window.onload = function() {
   }
   function go(n) {
     big.current = n;
-    var e = s[n], t = parseInt(e.getAttribute('data-timeToNext') || 0, 10),
+    var e = s[n], t = parseInt(e.getAttribute('data-time-to-next') || 0, 10),
       notes = e.getElementsByTagName('notes');
     document.body.className = e.getAttribute('data-bodyclass') || '';
     for (i = 0; i < s.length; i++) s[i].style.display = 'none';
