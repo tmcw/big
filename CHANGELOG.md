@@ -1,3 +1,8 @@
+## 2.0.1
+
+* Fixes an issue where clicking on a link in a slide advanced the slide
+  as well as clicked the link.
+
 ## 2.0.0
 
 * [63](https://github.com/tmcw/big/pull/63): a big performance improvement!
