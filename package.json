@@ -1,6 +1,6 @@
 {
   "name": "big-presentation",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "a presentation system for busy messy hackers",
   "main": "big.js",
   "scripts": {
