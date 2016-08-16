@@ -1,5 +1,5 @@
 window.onload = function() {
-  var s = document.getElementsByTagName('div'), ti, i, j;
+  var s = document.getElementsByTagName('div'), ti, i;
   var notes = [];
   for (i = 0; i < s.length; i++) {
     s[i].setAttribute('tabindex', 0);
