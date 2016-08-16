@@ -1,6 +1,16 @@
 window.onload = function() {
-  var s = document.getElementsByTagName('div'), ti, i;
-  for (i = 0; i < s.length; i++) s[i].setAttribute('tabindex', 0);
+  var s = document.getElementsByTagName('div'), ti, i, j;
+  var notes = [];
+  for (i = 0; i < s.length; i++) {
+    s[i].setAttribute('tabindex', 0);
+    var noteElements = s[i].getElementsByTagName('notes');
+    notes.push([]);
+    while (noteElements.length) {
+      var note = noteElements[0];
+      notes[i].push(note.innerHTML.trim());
+      note.parentNode.removeChild(note);
+    }
+  }
   if (!s.length) return;
   var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
   function resize() {
@@ -17,13 +27,12 @@ window.onload = function() {
   }
   function go(n) {
     big.current = n;
-    var e = s[n], t = parseInt(e.getAttribute('data-time-to-next') || 0, 10),
-      notes = e.getElementsByTagName('notes');
+    for (i = 0; typeof console === 'object' && i < notes[n].length; i++) console.log('%c%s: %s', 'padding:5px;font-family:serif;font-size:18px;line-height:150%;', n, notes[n][i]);
+    var e = s[n], t = parseInt(e.getAttribute('data-time-to-next') || 0, 10);
     document.body.className = e.getAttribute('data-bodyclass') || '';
     for (i = 0; i < s.length; i++) s[i].style.display = 'none';
     e.style.display = 'inline';
     e.focus();
-    for (i = 0; typeof console === 'object' && i < notes.length; i++) console.log('%c%s: %s', 'padding:5px;font-family:serif;font-size:18px;line-height:150%;', n, notes[i].innerHTML.trim());
     if (e.firstChild && e.firstChild.nodeName === 'IMG') {
       document.body.style.backgroundImage = 'url("' + e.firstChild.src + '")';
       e.firstChild.style.display = 'none';

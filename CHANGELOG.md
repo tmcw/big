@@ -1,3 +1,7 @@
+## 2.0.2
+
+* Notes in `<notes>` are no longer included in the title of slides.
+
 ## 2.0.1
 
 * Fixes an issue where clicking on a link in a slide advanced the slide
