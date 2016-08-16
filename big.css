@@ -28,7 +28,7 @@ img {
   width:100%;
 }
 
-div {
+body > div {
   cursor:pointer;
   cursor:hand;
   position:absolute;
