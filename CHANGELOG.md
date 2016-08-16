@@ -1,3 +1,7 @@
+## 2.0.3
+
+* Nested `<div>` elements are now allowed in slides.
+
 ## 2.0.2
 
 * Notes in `<notes>` are no longer included in the title of slides.
