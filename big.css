@@ -1,6 +1,5 @@
 body {
   font-family:'Helvetica';
-  letter-spacing:-5px;
   background:#000;
   background-size:100%;
   color:#fff;
@@ -34,7 +33,7 @@ body > div {
   position:absolute;
   top:0px;
   left:0px;
-  padding:75px;
+  padding:10%;
   line-height:97%;
 }
 
