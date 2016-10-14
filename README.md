@@ -136,6 +136,7 @@ big is available on `npm` as the `big-presentation` package.
 * [Sam Franklin on Open Source GIS at OSGIS](http://samfranklin.github.io/osgis2014/)
 * [Ryan Cooper's  "Where's the Story?" from KYGIS2014](http://ryan-m-cooper.com/kygis2014/)
 * [Web Maps Without Web Maps @ SOTM by Tyler Dahlberg](http://tdahlberg.github.io/somworkshop2015/)
+* [Server-less Python Web Services with Zappa](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Miserlou/Talks/master/serverless-sf/big.quickstart.html#0) by [Rich Jones](https://github.com/Miserlou)
 * Yours? Post it in issues.
 
 # Stuff that works with big
