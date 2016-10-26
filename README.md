@@ -160,4 +160,5 @@ today.
 
 ## See Also
 
+* [Andy Woodruff's advice for Big presentations](https://awoodruff.github.io/big-advice/#0)
 * [Jed Schmidt's weenote is a awesome big-inspired software](https://github.com/jed/weenote)
