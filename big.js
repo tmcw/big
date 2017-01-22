@@ -39,7 +39,7 @@ window.onload = function() {
             if ((big.audio.textTracks[0].cues[ci].startTime <= big.audio.currentTime)
               && (big.audio.textTracks[0].cues[ci].endTime > big.audio.currentTime)
               && ((big.current - 1) !== ci)) {
-              big.go(ci + 1, true)
+              go(ci + 1, true);
               break;
             }
         }
