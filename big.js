@@ -18,8 +18,7 @@ window.onload = function() {
     if (audioCandidates[ai].textTracks.length === 1 && audioCandidates[ai].textTracks[0].cues.length > 0) {
       big.audio = audioCandidates[ai];
       var playControl = document.createElement('div');
-      playControl.id = 'audio-control';
-      playControl.style = 'padding:5px';
+      playControl.style = 'padding:5px;color:#aaa;';
       playControl.onclick = function(e) {
         if (big.audio.paused) {
           if (big.current === 0)
@@ -32,9 +31,10 @@ window.onload = function() {
         e.stopPropagation();
       }
       document.getElementsByTagName('body')[0].appendChild(playControl);
+      big.playControl = playControl;
       window.setInterval(function() {
         if (!big.audio.paused) {
-          document.getElementById('audio-control').innerHTML = '&#9208;';
+          big.playControl.innerHTML = '&#9208;';
           for(var ci = 0; ci < big.audio.textTracks[0].cues.length; ci++)
             if ((big.audio.textTracks[0].cues[ci].startTime <= big.audio.currentTime)
               && (big.audio.textTracks[0].cues[ci].endTime > big.audio.currentTime)
@@ -44,7 +44,7 @@ window.onload = function() {
             }
         }
         else
-          document.getElementById('audio-control').innerHTML = '&#9654;';
+          big.playControl.innerHTML = '&#9654;';
 
       }, 200);
       break;
@@ -65,11 +65,11 @@ window.onload = function() {
   function go(n, dontSeek) {
     big.current = n;
     if (!dontSeek && big.audio && big.current === 0) {
-      document.getElementById('audio-control').className = 'hide';
+      big.playControl.style = 'display:none';
       big.audio.pause();
     }
     if (!dontSeek && big.audio && big.current > 0) {
-      document.getElementById('audio-control').className = '';
+      big.playControl.style = 'padding:5px;color:#aaa;';
       big.audio.currentTime = big.audio.textTracks[0].cues[big.current - 1].startTime;
       if (big.audio.paused)
         big.audio.play();
