@@ -49,15 +49,14 @@ window.onload = function() {
   }
   function go(n, dontSeek) {
     big.current = n;
-    if (!dontSeek && big.audio && big.current === 0) {
-      big.playControl.style = 'display:none';
-      big.audio.pause();
-    }
-    if (!dontSeek && big.audio && big.current > 0) {
-      big.playControl.style = 'padding:5px;color:#aaa;';
-      big.audio.currentTime = big.audio.textTracks[0].cues[big.current - 1].startTime;
-      if (big.audio.paused)
-        big.audio.play();
+    if (!dontSeek && big.audio) {
+      big.playControl.style = big.current === 0 ? 'display:none' : 'padding:5px;color:#aaa;';
+      if (big.current === 0) {
+        big.audio.pause();
+      } else {
+        big.audio.currentTime = big.audio.textTracks[0].cues[big.current - 1].startTime;
+        if (big.audio.paused) big.audio.play();
+      }
     }
     for (i = 0; typeof console === 'object' && i < notes[n].length; i++) console.log('%c%s: %s', 'padding:5px;font-family:serif;font-size:18px;line-height:150%;', n, notes[n][i]);
     var e = s[n], t = parseInt(e.getAttribute('data-time-to-next') || 0, 10);
