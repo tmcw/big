@@ -51,9 +51,8 @@ window.onload = function() {
     big.current = n;
     if (!dontSeek && big.audio) {
       big.playControl.style = big.current === 0 ? 'display:none' : 'padding:5px;color:#aaa;';
-      if (big.current === 0) {
-        big.audio.pause();
-      } else {
+      if (big.current === 0) big.audio.pause();
+      else {
         big.audio.currentTime = big.audio.textTracks[0].cues[big.current - 1].startTime;
         if (big.audio.paused) big.audio.play();
       }
