@@ -12,43 +12,28 @@ window.onload = function() {
     }
   }
   if (!s.length) return;
-  var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
-  var audioCandidates = document.getElementsByTagName('audio');
-  for(var ai = 0; ai < audioCandidates.length; ai++)
-    if (audioCandidates[ai].textTracks.length === 1 && audioCandidates[ai].textTracks[0].cues.length > 0) {
-      big.audio = audioCandidates[ai];
-      var playControl = document.createElement('div');
-      playControl.style = 'padding:5px;color:#aaa;';
-      playControl.onclick = function(e) {
-        if (big.audio.paused) {
-          if (big.current === 0)
-            big.fwd();
-          else
-            big.audio.play();
-        }
-        else
-          big.audio.pause();
-        e.stopPropagation();
-      }
-      document.getElementsByTagName('body')[0].appendChild(playControl);
-      big.playControl = playControl;
-      window.setInterval(function() {
-        if (!big.audio.paused) {
-          big.playControl.innerHTML = '&#9208;';
-          for(var ci = 0; ci < big.audio.textTracks[0].cues.length; ci++)
-            if ((big.audio.textTracks[0].cues[ci].startTime <= big.audio.currentTime)
-              && (big.audio.textTracks[0].cues[ci].endTime > big.audio.currentTime)
-              && ((big.current - 1) !== ci)) {
-              go(ci + 1, true);
-              break;
-            }
-        }
-        else
-          big.playControl.innerHTML = '&#9654;';
-
-      }, 200);
-      break;
-    }
+  var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length,
+    audio: [].slice.call(document.getElementsByTagName('audio')).filter(function (audio) {
+      return audio.textTracks.length === 1 && audio.textTracks[0].cues.length > 0;
+    })[0] };
+  if (big.audio) {
+    big.playControl = document.body.appendChild(document.createElement('div'));
+    big.playControl.style = 'padding:5px;color:#aaa;';
+    big.playControl.onclick = function(e) {
+      if (big.audio.paused) {
+        big.current === 0 ? fwd() : big.audio.play();
+      } else big.audio.pause();
+      e.stopPropagation();
+    };
+    window.setInterval(function() {
+      big.playControl.innerHTML = big.audio.paused ? '&#9654;' : '&#9208;';
+      for (var ci = 0; !big.audio.paused && ci < big.audio.textTracks[0].cues.length; ci++)
+        if ((big.audio.textTracks[0].cues[ci].startTime <= big.audio.currentTime)
+          && (big.audio.textTracks[0].cues[ci].endTime > big.audio.currentTime)
+          && ((big.current - 1) !== ci))
+          return go(ci + 1, true);
+    }, 200);
+  }
 
   function resize() {
     var w = window.innerWidth, h = window.innerHeight, e = s[big.current];
