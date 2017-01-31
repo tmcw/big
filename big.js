@@ -12,7 +12,29 @@ window.onload = function() {
     }
   }
   if (!s.length) return;
-  var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length };
+  var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length,
+    audio: [].slice.call(document.getElementsByTagName('audio')).filter(function (audio) {
+      return audio.textTracks.length === 1 && audio.textTracks[0].cues.length > 0;
+    })[0] };
+  if (big.audio) {
+    big.playControl = document.body.appendChild(document.createElement('div'));
+    big.playControl.style = 'padding:5px;color:#aaa;';
+    big.playControl.onclick = function(e) {
+      if (big.audio.paused) {
+        big.current === 0 ? fwd() : big.audio.play();
+      } else big.audio.pause();
+      e.stopPropagation();
+    };
+    window.setInterval(function() {
+      big.playControl.innerHTML = big.audio.paused ? '&#9654;' : '&#9208;';
+      for (var ci = 0; !big.audio.paused && ci < big.audio.textTracks[0].cues.length; ci++)
+        if ((big.audio.textTracks[0].cues[ci].startTime <= big.audio.currentTime)
+          && (big.audio.textTracks[0].cues[ci].endTime > big.audio.currentTime)
+          && ((big.current - 1) !== ci))
+          return go(ci + 1, true);
+    }, 200);
+  }
+
   function resize() {
     var w = window.innerWidth, h = window.innerHeight, e = s[big.current];
     e.style.fontSize = h + 'px';
@@ -25,8 +47,16 @@ window.onload = function() {
     pass(2, pass(5, pass(10, h - 2)));
     e.style.marginTop = (h - e.offsetHeight) / 2 + 'px';
   }
-  function go(n) {
+  function go(n, dontSeek) {
     big.current = n;
+    if (!dontSeek && big.audio) {
+      big.playControl.style = big.current === 0 ? 'display:none' : 'padding:5px;color:#aaa;';
+      if (big.current === 0) big.audio.pause();
+      else {
+        big.audio.currentTime = big.audio.textTracks[0].cues[big.current - 1].startTime;
+        if (big.audio.paused) big.audio.play();
+      }
+    }
     for (i = 0; typeof console === 'object' && i < notes[n].length; i++) console.log('%c%s: %s', 'padding:5px;font-family:serif;font-size:18px;line-height:150%;', n, notes[n][i]);
     var e = s[n], t = parseInt(e.getAttribute('data-time-to-next') || 0, 10);
     document.body.className = e.getAttribute('data-bodyclass') || '';
@@ -42,7 +72,7 @@ window.onload = function() {
       document.body.style.backgroundColor = e.style.backgroundColor;
     }
     if (ti !== undefined) window.clearInterval(ti);
-    if (t > 0) ti = window.setTimeout(fwd, t * 1000);
+    if (t > 0 && !big.audio) ti = window.setTimeout(fwd, t * 1000);
     resize();
     if (window.location.hash !== n) window.location.hash = n;
     document.title = e.textContent || e.innerText;

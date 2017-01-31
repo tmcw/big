@@ -194,3 +194,16 @@ You can center a slide on an image with CSS, the same way you center images on w
 ```html
 <div data-bodyclass="center-image">per slide body classes</div>
 ```
+
+## Recorded Audio
+
+This system is designed with live presentations in mind. There are usually better forms for conveying your talk's contents online. On the other hand, it's really easy to record your talk's audio with your phone and throw it online with your slides. This is supported via the addition of an appropriate `<audio>` tag and [WebVTT](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) file. All you'll have to do is time the transitions between slides and write a simple text file, then drop the following tag before `</body>`.
+
+```
+<audio>
+  <source src="my-talk.mp3" type="audio/mpeg">
+  <track src="my-talk.vtt" kind="chapters" default>
+</audio>
+```
+
+Note that since the WebVTT will handle advancing slides, `data-time-to-next` won't work if an audio tag is defined. This functionality also means that successfully embedding other `<audio>` elements in your talk will probably require some JavaScript surgery.
