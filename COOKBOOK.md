@@ -17,6 +17,21 @@ that can go in `big.css`.
 * Embrace resolution and aspect ratio diversity and make presentations
   work on a variety of screens and in lots of environments.
 
+## What if I want an image as the first thing in a slide, instead of a background?
+
+If an image tag is the first thing in a slide `<div>`, it becomes the background. If you
+want an image to instead be the first thing on a slide, visually, but not the background,
+**put a space before the image tag**.
+
+<details>
+<summary>How does this work?</summary>
+
+`big` looks for the 'first child' (`.firstChild`) of the slide to see if it can
+grab a background image. Spaces and other text are nodes: `TextNode` nodes in
+particular, so if there's one of them at the beginning of a slide, big _won't_
+use the image, since it'll then be the second node.
+</details>
+
 ## Avoiding text breaks
 
 By default, **big** will wrap text the same way your browser does. Sometimes
