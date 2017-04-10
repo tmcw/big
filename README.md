@@ -9,6 +9,8 @@ styling (`em`) and keyboard controls for navigation.
 
 ## Quickstart
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/big.svg)](https://greenkeeper.io/)
+
 You can skip every step by doing
 
     wget https://raw.github.com/tmcw/big/gh-pages/big.quickstart.html
