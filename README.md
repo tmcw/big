@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/tmcw/big/tree/gh-pages.svg?style=svg&circle-token=2963848e42fe67b8a66a2ad2d6dd99d05bdde6a4)](https://circleci.com/gh/tmcw/big/tree/gh-pages)
+[![Circle CI](https://circleci.com/gh/tmcw/big/tree/gh-pages.svg?style=shield&circle-token=2963848e42fe67b8a66a2ad2d6dd99d05bdde6a4)](https://circleci.com/gh/tmcw/big/tree/gh-pages) [![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/big.svg)](https://greenkeeper.io/)
 
 This is a ridiculous presentation system that works great for
 creative, hurried people. See [the demo](http://macwright.org/big/demo.html)
@@ -9,7 +9,6 @@ styling (`em`) and keyboard controls for navigation.
 
 ## Quickstart
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/big.svg)](https://greenkeeper.io/)
 
 You can skip every step by doing
 
