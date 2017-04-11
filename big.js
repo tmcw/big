@@ -1,18 +1,15 @@
 window.onload = function() {
-  var s = document.querySelectorAll('body > div'), ti, i;
-  var notes = [];
+  var s = document.querySelectorAll('body > div'), ti, i, notes = [], big;
   for (i = 0; i < s.length; i++) {
     s[i].setAttribute('tabindex', 0);
     var noteElements = s[i].getElementsByTagName('notes');
     notes.push([]);
     while (noteElements.length) {
-      var note = noteElements[0];
-      notes[i].push(note.innerHTML.trim());
-      note.parentNode.removeChild(note);
+      notes[i].push(noteElements[0].parentNode.removeChild(noteElements[0]).innerHTML.trim());
     }
   }
-  if (!s.length) return;
-  var big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length,
+  if (!s.length) return console.error('big didn\'t find any slides, so it exited');
+  big = window.big = { current: 0, forward: fwd, reverse: rev, go: go, length: s.length,
     audio: [].slice.call(document.getElementsByTagName('audio')).filter(function (audio) {
       return audio.textTracks.length === 1 && audio.textTracks[0].cues.length > 0;
     })[0] };
