@@ -13,6 +13,7 @@ focused presentations. Stop tweaking fonts and filling slides with text.
 Big is a configuration-free system that naturally encourages good presentation
 design.
 
+* [Demo](http://macwright.org/big/demo.html)
 * :blue_book: [User Guide](docs/user-guide.md)
 * :green_book: [API Documentation](docs/api.md)
 * :pencil: [Protips](docs/protips.md)

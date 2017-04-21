@@ -11,9 +11,17 @@ which helps create and serve presentations. Install it globally with `npm` or
 
 `big-presentation` is the tool you use to create, manage and give big presentations.
 
-* `big-presentation create`
-* `big-presentation serve`
-* `big-presentation check`
+When you install it with npm or yarn, you get these three utilities:
+
+* `big-presentation-init`
+  * Initializes presentations. Run it just like that to dump the necessary
+  files in the current directory, or specify a directory name to create
+  a new directory and put the files in that.
+* `big-presentation-serve`
+  * Serves up your presentation.
+* `big-presentation-offline`
+  * Creates an `index.offline.html` file with everything that can be included,
+    included inline in the HTML, so you don't have to trust wifi
 
 ## Writing a presentation
 
@@ -32,6 +40,8 @@ which helps create and serve presentations. Install it globally with `npm` or
     Big, if you want to.
 
 ## Talk, Print, and Jump Modes
+
+![](../.github/big-modes.png)
 
 Big has three modes, which you can swap between by hitting `t`, `p`, and `j`.
 

@@ -3,19 +3,7 @@ html {
 }
 
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'avenir next',
-    avenir,
-    helvetica,
-    'helvetica neue',
-    ubuntu,
-    roboto,
-    noto,
-    'segoe ui',
-    arial,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   background: #000;
   color: #fff;
   margin: 0;
@@ -84,6 +72,14 @@ body.print-mode {
 
 body.print-mode div.sub-container {
   padding: 10px 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ul.notes-list {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
 }
 
 body.print-mode div.slide-container {
@@ -107,9 +103,4 @@ body.jump-mode div.slide-container {
 
 body.jump-mode div.slide-container:hover {
   border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
-ul.notes-list {
-  display: inline-block;
-  vertical-align: top;
 }
