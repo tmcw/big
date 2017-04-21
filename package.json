@@ -5,6 +5,7 @@
   "main": "big.js",
   "scripts": {
     "test": "eslint lib/big.js && stylelint lib/big.css && flow",
+    "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
     "release": "standard-version"
   },
   "bin": {
@@ -30,6 +31,7 @@
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
+    "documentation": "^4.0.0-beta.19",
     "eslint": "^3.3.1",
     "flow-bin": "^0.44.2",
     "prettier": "^1.1.0",
