@@ -1,3 +1,11 @@
+## 3.0.0
+
+* **modes**: hit t, p, and j for talk, presentation, and jump modes
+* **tooling**: now has cli tools to init, serve, and offline-pack presentations
+* **breaking change**: background images are now specified with the data-background-image
+  property, rather than an img tag
+* **code style**: now uses normal style, longer, more commented code
+
 ## 2.0.3
 
 * Nested `<div>` elements are now allowed in slides.

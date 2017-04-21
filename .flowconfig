@@ -1,0 +1,9 @@
+[ignore]
+.*conventional-changelog-core.*
+.*stylelint.*
+
+[include]
+
+[libs]
+
+[options]

@@ -1,0 +1,106 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  background: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+em,
+a {
+  font-style: normal;
+  color: #8dbd0c;
+}
+
+a {
+  background: #34d0e7;
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+div.slide-container {
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+}
+
+div.slide {
+  box-sizing: border-box;
+  cursor: pointer;
+  cursor: hand;
+  padding: 4%;
+}
+
+div.imageText {
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* normally not good, but ok in context of full screen directional navigation */
+:focus {
+  outline: 0;
+}
+
+body.talk-mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+body.print-mode {
+  background: #fff;
+  color: #000;
+  font-weight: normal;
+  padding: 30px 20px;
+}
+
+body.print-mode div.sub-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+ul.notes-list {
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+}
+
+body.print-mode div.slide-container {
+  border: 1px solid #000;
+}
+
+body.jump-mode {
+  padding: 10px;
+}
+
+body.jump-mode div.sub-container {
+  display: inline-block;
+  vertical-align: top;
+  padding: 2px;
+}
+
+body.jump-mode div.slide-container {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+body.jump-mode div.slide-container:hover {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
