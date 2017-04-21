@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var path = require('path');
 var shelljs = require('shelljs');
 var directory = process.argv[2];

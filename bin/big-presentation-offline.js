@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var Inliner = require('inliner');
 var http = require('http');
 var ecstatic = require('ecstatic');

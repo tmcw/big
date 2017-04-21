@@ -9,7 +9,8 @@
   },
   "bin": {
     "big-presentation-init": "./bin/big-presentation-init.js",
-    "big-presentation-serve": "./bin/big-presentation-serve.js"
+    "big-presentation-serve": "./bin/big-presentation-serve.js",
+    "big-presentation-offline": "./bin/big-presentation-offline.js"
   },
   "repository": {
     "type": "git",

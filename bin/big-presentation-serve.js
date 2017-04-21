@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var http = require('http');
 var ip = require('ip');
 var getPort = require('get-port');
