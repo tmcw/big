@@ -1,0 +1,120 @@
+/**
+ * Monokai style - ported by Luigi Maselli - http://grigio.org
+ */
+.hljs {
+  display: block;
+  font-family:
+    San Francisco Mono,
+    Monaco,
+    Consolas,
+    Lucida Console,
+    DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,
+    monospace;
+  overflow-x: auto;
+  font-weight: normal;
+}
+
+.dark .hljs {
+  color: #ddd;
+}
+
+.dark .hljs-tag,
+.dark .hljs-keyword,
+.dark .hljs-selector-tag,
+.dark .hljs-literal,
+.dark .hljs-strong,
+.dark .hljs-name {
+  color: #d13787;
+}
+
+.dark .hljs-code {
+  color: #66d9ef;
+}
+
+.dark .hljs-attribute,
+.dark .hljs-symbol,
+.dark .hljs-regexp,
+.dark .hljs-link {
+  color: #bf79db;
+}
+
+.light .hljs-class,
+.dark .hljs-string,
+.dark .hljs-bullet,
+.dark .hljs-subst,
+.dark .hljs-title,
+.dark .hljs-section,
+.dark .hljs-emphasis,
+.dark .hljs-type,
+.dark .hljs-built_in,
+.dark .hljs-builtin-name,
+.dark .hljs-selector-attr,
+.dark .hljs-selector-pseudo,
+.dark .hljs-addition,
+.dark .hljs-variable,
+.dark .hljs-template-tag,
+.dark .hljs-template-variable {
+  color: #a6e22e;
+}
+
+.dark .hljs-comment,
+.dark .hljs-quote,
+.dark .hljs-deletion,
+.dark .hljs-meta {
+  color: #c3c0af;
+}
+
+/**
+ * Monokai style - ported by Luigi Maselli - http://grigio.org
+ */
+.light .hljs {
+  color: #34383e;
+}
+
+.light .hljs-tag,
+.light .hljs-keyword,
+.light .hljs-selector-tag,
+.light .hljs-literal,
+.light .hljs-strong,
+.light .hljs-name {
+  color: #d13787;
+}
+
+.light .hljs-code {
+  color: #66d9ef;
+}
+
+.light .hljs-attribute,
+.light .hljs-symbol,
+.light .hljs-regexp,
+.light .hljs-number,
+.light .hljs-link {
+  color: #01988c;
+}
+
+.light .hljs-class,
+.light .hljs-string,
+.light .hljs-bullet,
+.light .hljs-subst,
+.light .hljs-title,
+.light .hljs-section,
+.light .hljs-emphasis,
+.light .hljs-type,
+.light .hljs-built_in,
+.light .hljs-builtin-name,
+.light .hljs-selector-attr,
+.light .hljs-selector-pseudo,
+.light .hljs-addition,
+.light .hljs-variable,
+.light .hljs-template-tag,
+.light .hljs-template-variable {
+  color: #5d4fa1;
+}
+
+.light .hljs-comment,
+.light .hljs-quote,
+.light .hljs-deletion,
+.light .hljs-meta {
+  color: #a0a1a7;
+}

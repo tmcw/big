@@ -11,5 +11,5 @@ if (directory) {
 }
 
 function init(inDirectory) {
-  shelljs.cp(path.join(__dirname, '../lib/*'), inDirectory);
+  shelljs.cp('-R', path.join(__dirname, '../lib/*'), inDirectory);
 }
