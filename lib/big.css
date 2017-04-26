@@ -1,14 +1,22 @@
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Rubik'),
+    local('Rubik-Regular'),
+    url('fonts/rubik-v4-latin-regular.woff2') format('woff2'),
+    url('fonts/rubik-v4-latin-regular.woff') format('woff');
+}
+
 html {
   height: 100%;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
-  background: #000;
-  color: #fff;
+  font-family: Rubik, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-weight: bold;
 }
 
 h1,
@@ -18,16 +26,48 @@ p {
   margin: 0;
 }
 
-em,
 a {
-  font-style: normal;
-  color: #8dbd0c;
+  color: #fff;
+  text-decoration-skip: ink;
+  border-radius: 6px;
 }
 
-a {
-  background: #34d0e7;
-  color: #000;
-  text-decoration: none;
+em {
+  font-style: normal;
+}
+
+.dark {
+  background: #272c32;
+  color: #fff;
+}
+
+.dark em {
+  color: #fadb03;
+}
+
+.dark a {
+  color: #7cbfe5;
+}
+
+.dark a:hover {
+  background: #4e5b6f;
+}
+
+.light {
+  background: #f5f5f5;
+  color: #34383e;
+}
+
+.light em {
+  color: #d13787;
+}
+
+.light a {
+  color: #0889d1;
+}
+
+.light a:hover {
+  color: #0069a4;
 }
 
 img {

@@ -7,13 +7,14 @@
   <link href='lib/big.css' rel='stylesheet' type='text/css' />
   <style>
     .new-shiny { background: #aaaaaa; }
+    .light-text { color: #fff; }
   </style>
-  <link href='lib/highlight.min.css' rel='stylesheet' type='text/css' />
+  <link href='lib/highlight.css' rel='stylesheet' type='text/css' />
   <script src='lib/highlight.js'></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <script src='lib/big.js'></script>
 </head>
-<body>
+<body class='light'>
 <div>use &harr; to navigate</div>
 <div>
     Big
@@ -24,15 +25,19 @@
 <div>+text</div>
 <div><pre><code>// and
 var code = true;
+var x = 'foo';
+class re { }
+var r = /tag/g;
+var y = [1, 2, 3];
 function javascript() {
   return probably;
 }</code></pre></div>
 <div>as <em>big</em> as it can be</div>
-<div>with <div style='font-style:italic;background:#555;'>normal HTML</div></div>
+<div>with <div style='font-style:italic;background:#fff;'>normal HTML</div></div>
 <div data-time-to-next='3'>and now it's perfect for ignite talks (wait 3 seconds)</div>
 <div>no config</div>
 <div><em>1.5k</em></div>
-<div data-background-image='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg'>images too</div>
+<div data-bodyclass='light-text' data-background-image='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg'>images too</div>
 <div data-bodyclass='new-shiny'>per slide body classes</div>
 <div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
 </body>
