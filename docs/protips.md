@@ -17,21 +17,6 @@ that can go in `big.css`.
 * Embrace resolution and aspect ratio diversity and make presentations
   work on a variety of screens and in lots of environments.
 
-## What if I want an image as the first thing in a slide, instead of a background?
-
-If an image tag is the first thing in a slide `<div>`, it becomes the background. If you
-want an image to instead be the first thing on a slide, visually, but not the background,
-**put a space before the image tag**.
-
-<details>
-<summary>How does this work?</summary>
-
-`big` looks for the 'first child' (`.firstChild`) of the slide to see if it can
-grab a background image. Spaces and other text are nodes: `TextNode` nodes in
-particular, so if there's one of them at the beginning of a slide, big _won't_
-use the image, since it'll then be the second node.
-</details>
-
 ## Avoiding text breaks
 
 By default, **big** will wrap text the same way your browser does. Sometimes
@@ -133,13 +118,12 @@ body {
 
 ## Backgrounds
 
-By default, `big` has a plain white background. If you make an image the first
-thing in a slide, then it'll make that image the background image of the slide -
-it's just a convenient little shortcut.
+By default, `big` has a flat black background. You can set an image as a background
+by using the `data-background-image` attribute of the slide `<div>`, like this:
 
-Note that making the image the first thing in a slide means that the element
-must **go directly after the `<div>` tag with no space**. Whitespace in HTML
-is an element, too - a TextNode.
+```html
+<div data-background-image='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg'>images too</div>
+```
 
 Anyway - by default, big has the rule `background-size:100%;` set on slides.
 This means that the background will be positioned to fit _within_ the slide's
