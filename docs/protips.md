@@ -10,6 +10,23 @@ general-usage protips to share.
 Recipes are presented as HTML, that would go in `index.html`, and CSS,
 that can go in `big.css`.
 
+## Themes
+
+Big comes with two themes by default: light and dark. Change the `body`
+element's class to `dark` or `light` to choose one:
+
+The light theme:
+
+```html
+<body class='light'>
+```
+
+The dark theme:
+
+```html
+<body class='dark'>
+```
+
 ## Theory
 
 * Presentations are webpages, and should be created and styled in the same

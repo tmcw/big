@@ -27,6 +27,9 @@ When you install it with npm or yarn, you get these three utilities:
 
 * A `div` is a slide.
   * Divs can be nested without nested divs being treated as slides
+  * There are two built-in **themes**: light and dark. You set a theme by setting
+    the `class` of the `body` element. By default, `big-presentation-init` chooses
+    `light`. Change it to `dark` to make presentations dark and cool.
   * `div` elements can have special attributes that affect the presentation:
     * `data-time-to-next="5"` causes the slide to auto-advance after 5 seconds, or the number you specify
     * `data-bodyclass="something"` adds a custom class to the body tag when the slide is displayed
