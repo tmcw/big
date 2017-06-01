@@ -1,3 +1,23 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="3.1.0-alpha.0"></a>
+# [3.1.0-alpha.0](https://github.com/tmcw/big/compare/v2.0.3...v3.1.0-alpha.0) (2017-06-01)
+
+
+### Bug Fixes
+
+* Remove unused groupEnd argument ([f37e9fd](https://github.com/tmcw/big/commit/f37e9fd))
+
+
+### Features
+
+* apply data-bodyclass also on print/jump views ([#80](https://github.com/tmcw/big/issues/80)) ([52e6a31](https://github.com/tmcw/big/commit/52e6a31))
+* Make it beautiful ([97c5972](https://github.com/tmcw/big/commit/97c5972))
+
+
+
 ## 3.0.0
 
 * **modes**: hit t, p, and j for talk, presentation, and jump modes
