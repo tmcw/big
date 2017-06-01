@@ -13,6 +13,29 @@ focused presentations. Stop tweaking fonts and filling slides with text.
 Big is a configuration-free system that naturally encourages good presentation
 design.
 
+**Quickstart**
+
+Install big-presentation.
+
+```sh
+$ npm install -g big-presentation
+```
+
+Create a new presentation.
+
+```sh
+$ big-presentation-init all-about-cats
+```
+
+Serve it so you can view it in a web browser.
+
+```sh
+$ cd all-about-cats
+$ big-presentation-serve
+```
+
+:tada: :tada: :tada: :tada: :tada:
+
 * [Demo](http://macwright.org/big/demo.html)
 * :blue_book: [User Guide](docs/user-guide.md)
 * :green_book: [API Documentation](docs/api.md)
