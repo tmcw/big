@@ -37,7 +37,8 @@ $ big-presentation-serve
 Convert a presentation composed in markdown into serve-able html.
 
 ```sh
-$ big-presentation-compose all-about-cats
+$ cd all-about-cats
+$ big-presentation-compose
 ```
 _(This will convert an `index.md` file in that presentation directory into an `index.html`)_
 
