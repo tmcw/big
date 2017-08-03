@@ -34,6 +34,13 @@ $ cd all-about-cats
 $ big-presentation-serve
 ```
 
+Convert a presentation composed in markdown into serve-able html.
+
+```sh
+$ big-presentation-compose all-about-cats
+```
+_(This will convert an `index.md` file in that presentation directory into an `index.html`)_
+
 :tada: :tada: :tada: :tada: :tada:
 
 * [Demo](http://macwright.org/big/demo.html)
