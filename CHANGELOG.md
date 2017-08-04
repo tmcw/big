@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.3.0-0"></a>
+# [3.3.0-0](https://github.com/tmcw/big/compare/v3.1.0...v3.3.0-0) (2017-08-04)
+
+
+### Features
+
+* command-line interface for generating presentations from markdown ([c5e3aa7](https://github.com/tmcw/big/commit/c5e3aa7))
+
+
+
 <a name="3.1.0"></a>
 # [3.1.0](https://github.com/tmcw/big/compare/v2.0.3...v3.1.0) (2017-06-01)
 
