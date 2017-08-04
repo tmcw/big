@@ -1,24 +1,34 @@
 #!/usr/bin/env node
 
-// Pulled from https://github.com/tmcw/biggie/blob/gh-pages/cli.js
-var concat = require('concat-stream');
 var fs = require('fs');
+var cpy = require('cpy');
+var path = require('path');
 var marked = require('marked');
 var mustache = require('mustache');
 
-fs.createReadStream('index.md').pipe(concat(convert));
+try {
+  var markdownText = fs.readFileSync('index.md', 'utf8');
+} catch (e) {
+  throw new Error('This directory does not contain the required index.md file');
+}
 
-function convert(data) {
-    var divs = data.toString().split('---').filter(function(v) {
-        return v.replace(/\s/g, '');
-    }).map(function(v) {
-        return '<div>' + marked(v) + '</div>';
-    }).join('\n');
+var divs = markdownText.split('---').filter(function(v) {
+  return v.replace(/\s/g, '');
+}).map(function(v) {
+  return '<div>' + marked(v) + '</div>';
+}).join('\n');
 
-    fs.writeFileSync('index.html', mustache.render(
-        fs.readFileSync('template.hbs', 'utf8'), {
+// copy dependencies to the directory first, making sure not to overwrite
+cpy(path.join(__dirname, '../lib/*'), './', { overwrite: false })
+  .then(function() {
+    var renderedTemplate = mustache.render(
+      fs.readFileSync(path.join(__dirname, './template.hbs'), 'utf8'), {
         //TODO parameterize title?
         title: 'big',
         slides: divs
-    }), null, 2)
-}
+      });
+    fs.writeFileSync('index.html', renderedTemplate);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
