@@ -1,6 +1,6 @@
 {
   "name": "big-presentation",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "a presentation system for busy messy hackers",
   "main": "big.js",
   "scripts": {
@@ -11,7 +11,8 @@
   "bin": {
     "big-presentation-init": "./bin/big-presentation-init.js",
     "big-presentation-serve": "./bin/big-presentation-serve.js",
-    "big-presentation-offline": "./bin/big-presentation-offline.js"
+    "big-presentation-offline": "./bin/big-presentation-offline.js",
+    "big-presentation-compose": "./bin/big-presentation-compose.js"
   },
   "repository": {
     "type": "git",
@@ -75,10 +76,13 @@
     "extends": "eslint:recommended"
   },
   "dependencies": {
+    "concat-stream": "^1.6.0",
     "ecstatic": "^2.1.0",
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
+    "marked": "^0.3.6",
+    "mustache": "^2.3.0",
     "shelljs": "^0.7.7"
   }
 }

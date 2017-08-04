@@ -11,7 +11,7 @@ which helps create and serve presentations. Install it globally with `npm` or
 
 `big-presentation` is the tool you use to create, manage and give big presentations.
 
-When you install it with npm or yarn, you get these three utilities:
+When you install it with npm or yarn, you get these four utilities:
 
 * `big-presentation-init`
   * Initializes presentations. Run it just like that to dump the necessary
@@ -22,6 +22,9 @@ When you install it with npm or yarn, you get these three utilities:
 * `big-presentation-offline`
   * Creates an `index.offline.html` file with everything that can be included,
     included inline in the HTML, so you don't have to trust wifi
+* `big-presentation-compose`
+  * Writes from a file you've composed in [Markdown](https://help.ghost.org/hc/en-us/articles/224410728-Markdown-Guide) 
+  into html suitable for a big presentation. (Writes from `index.md` to `index.html`)
 
 ## Writing a presentation
 
