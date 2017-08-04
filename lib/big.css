@@ -5,8 +5,8 @@
   src:
     local('Rubik'),
     local('Rubik-Regular'),
-    url('fonts/rubik-v4-latin-regular.woff2') format('woff2'),
-    url('fonts/rubik-v4-latin-regular.woff') format('woff');
+    url('./rubik-v4-latin-regular.woff2') format('woff2'),
+    url('./rubik-v4-latin-regular.woff') format('woff');
 }
 
 html {

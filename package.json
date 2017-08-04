@@ -76,13 +76,12 @@
     "extends": "eslint:recommended"
   },
   "dependencies": {
-    "concat-stream": "^1.6.0",
+    "cpy": "^5.1.0",
     "ecstatic": "^2.1.0",
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
     "marked": "^0.3.6",
-    "mustache": "^2.3.0",
-    "shelljs": "^0.7.7"
+    "mustache": "^2.3.0"
   }
 }

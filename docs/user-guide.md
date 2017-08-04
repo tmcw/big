@@ -56,3 +56,44 @@ Big has three modes, which you can swap between by hitting `t`, `p`, and `j`.
   two slides per printed page, and shows speakers notes along with slides
 * **j**ump: Shows many slides per page, useful for quickly finding a slide
   and 'jumping' to it.
+
+# `big-presentation-compose`
+
+## Writing a presentation
+
+Presentations written for `compose` are written in Markdown, not HTML, and
+slides are separated by `---`, which is usually the Markdown code for a
+`<hr />` horizontal rule element. For instance:
+
+```markdown
+It's _big_, but a little more eazy
+
+---
+
+Put dashes between slides to separate them.
+
+---
+
+Supports lists
+
+* Like
+* This
+* One
+```
+
+This text would be in the file `index.md`, and when you run `big-presentation-compose`,
+each section separated by `---` gets wrapped in a `<div>` element, the list
+becomes HTML, and the rest of [Markdown syntax](https://daringfireball.net/projects/markdown/syntax)
+becomes HTML.
+
+## `big-presentation-compose` troubleshooting
+
+big-presentation-compose copies `big.js`, `big.css`, and other files that make
+your presentation work into the specified directory, but it makes sure never
+to overwrite them if they already exist.
+
+So, if you've customized big.js or big.css but want to get a fresh copy by running
+big-presentation-compose, you'll need to delete it first, and then big-presentation-compose
+will add a new copy in there: it'll never overwrite your existing dependency files.
+That said, it _will_ overwrite the generated `index.html` file, because that makes
+it way easier to work on a presentation.
