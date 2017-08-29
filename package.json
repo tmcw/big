@@ -77,7 +77,7 @@
   },
   "dependencies": {
     "cpy": "^5.1.0",
-    "ecstatic": "^2.1.0",
+    "ecstatic": "^3.0.0",
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
