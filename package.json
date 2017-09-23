@@ -76,7 +76,7 @@
     "extends": "eslint:recommended"
   },
   "dependencies": {
-    "cpy": "^5.1.0",
+    "cpy": "^6.0.0",
     "ecstatic": "^2.1.0",
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
