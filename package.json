@@ -32,9 +32,9 @@
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
-    "documentation": "^4.0.0-beta.19",
+    "documentation": "^5.0.0",
     "eslint": "^4.1.0",
-    "flow-bin": "^0.53.0",
+    "flow-bin": "^0.58.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
     "stylelint": "^8.0.0",
@@ -76,8 +76,8 @@
     "extends": "eslint:recommended"
   },
   "dependencies": {
-    "cpy": "^5.1.0",
-    "ecstatic": "^3.0.0",
+    "cpy": "^6.0.0",
+    "ecstatic": "^2.1.0",
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
