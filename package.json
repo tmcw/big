@@ -34,7 +34,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "documentation": "^5.0.0",
     "eslint": "^4.1.0",
-    "flow-bin": "^0.61.0",
+    "flow-bin": "^0.62.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
     "stylelint": "^8.0.0",
