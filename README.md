@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://tommacwright.typeform.com/to/EcYjLf">
-    <img width="340" src='.github/big-survey.png' />
+    <img width="460" src='.github/big-survey.png' />
   </a>
 </p>
 
