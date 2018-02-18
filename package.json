@@ -37,7 +37,7 @@
     "flow-bin": "^0.65.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
-    "stylelint": "^8.0.0",
+    "stylelint": "^9.0.0",
     "stylelint-config-standard": "^17.0.0"
   },
   "config": {
