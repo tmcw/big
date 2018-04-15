@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.1"></a>
+## [3.2.1](https://github.com/tmcw/big/compare/v3.2.0...v3.2.1) (2018-04-15)
+
+
+### Bug Fixes
+
+* **package:** update cpy to version 6.0.0 ([#107](https://github.com/tmcw/big/issues/107)) ([22b2c41](https://github.com/tmcw/big/commit/22b2c41))
+* **package:** update ecstatic to version 3.0.0 ([#103](https://github.com/tmcw/big/issues/103)) ([d4612b4](https://github.com/tmcw/big/commit/d4612b4))
+* **package:** update ecstatic to version 3.1.1 ([#115](https://github.com/tmcw/big/issues/115)) ([e62bb04](https://github.com/tmcw/big/commit/e62bb04)), closes [#114](https://github.com/tmcw/big/issues/114)
+* Use event.key instead of event.which ([#131](https://github.com/tmcw/big/issues/131)) ([41e46d4](https://github.com/tmcw/big/commit/41e46d4)), closes [#129](https://github.com/tmcw/big/issues/129)
+
+
+
 <a name="3.2.0"></a>
 # [3.2.0](https://github.com/tmcw/big/compare/v3.2.0-0...v3.2.0) (2017-08-04)
 
