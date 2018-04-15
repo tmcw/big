@@ -45,6 +45,10 @@ em {
   color: #fadb03;
 }
 
+.light a {
+  color: #0889d1;
+}
+
 .dark a {
   color: #7cbfe5;
 }
@@ -60,10 +64,6 @@ em {
 
 .light em {
   color: #d13787;
-}
-
-.light a {
-  color: #0889d1;
 }
 
 .light a:hover {

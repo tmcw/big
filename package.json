@@ -37,8 +37,8 @@
     "flow-bin": "^0.69.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
-    "stylelint": "^8.0.0",
-    "stylelint-config-standard": "^17.0.0"
+    "stylelint": "^9.2.0",
+    "stylelint-config-standard": "^18.2.0"
   },
   "config": {
     "commitizen": {
