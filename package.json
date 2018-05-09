@@ -4,10 +4,14 @@
   "description": "a presentation system for busy messy hackers",
   "main": "big.js",
   "scripts": {
-    "test": "eslint lib/big.js && stylelint lib/big.css && flow",
+    "test": "eslint lib/big.js && stylelint lib/big.css && flow && jest",
     "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
     "release": "standard-version"
   },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "bin": {
     "big-presentation-init": "./bin/big-presentation-init.js",
     "big-presentation-serve": "./bin/big-presentation-serve.js",
@@ -35,6 +39,7 @@
     "documentation": "^6.1.0",
     "eslint": "^4.1.0",
     "flow-bin": "^0.69.0",
+    "jest": "^22.4.3",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
     "stylelint": "^9.2.0",
@@ -76,7 +81,6 @@
     "extends": "eslint:recommended"
   },
   "dependencies": {
-    "cpy": "^6.0.0",
     "ecstatic": "^3.1.1",
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
