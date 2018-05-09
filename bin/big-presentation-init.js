@@ -1,16 +1,27 @@
 #!/usr/bin/env node
-var path = require('path');
-var fs = require('fs');
-var cpy = require('cpy');
-var directory = process.argv[2];
+var path = require("path");
+var fs = require("fs");
 
-if (directory) {
-  fs.mkdirSync(directory);
-  init(directory);
-} else {
-  init('./');
+function init(process) {
+  var directory = process.argv[2];
+  if (directory) {
+    fs.mkdirSync(directory);
+    init(directory);
+  } else {
+    init(process.cwd());
+  }
+
+  function init(inDirectory) {
+    var libDir = path.join(__dirname, "../lib/");
+    fs.readdirSync(libDir).forEach(function(file) {
+      fs.writeFileSync(
+        path.join(inDirectory, file),
+        fs.readFileSync(path.join(libDir, file)),
+        { flag: "wx" }
+      );
+    });
+  }
 }
 
-function init(inDirectory) {
-  cpy(path.join(__dirname, '../lib/*'), inDirectory);
-}
+module.exports = init;
+if (require.main === module) init(process);

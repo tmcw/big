@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`init 1`] = `
+Array [
+  "big.css",
+  "big.js",
+  "highlight.css",
+  "highlight.js",
+  "index.html",
+  "rubik-v4-latin-regular.woff",
+  "rubik-v4-latin-regular.woff2",
+]
+`;
