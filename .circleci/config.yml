@@ -11,7 +11,7 @@ jobs:
 
       - restore_cache:
           keys:
-          - dependency-cache-{{ checksum "package.json" }}
+          - dependency-cache-{{ checksum "yarn.lock" }}
           - dependency-cache-
 
       - run: yarn install
@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "yarn.lock" }}
         
       - run: yarn test
   build-10:
@@ -33,7 +33,7 @@ jobs:
 
       - restore_cache:
           keys:
-          - dependency-cache-{{ checksum "package.json" }}
+          - dependency-cache-{{ checksum "yarn.lock" }}
           - dependency-cache-
 
       - run: yarn install
@@ -41,7 +41,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "yarn.lock" }}
         
       - run: yarn test
 
