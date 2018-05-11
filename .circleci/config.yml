@@ -11,15 +11,15 @@ jobs:
 
       - restore_cache:
           keys:
-          - node8-dependencies-{{ checksum "package.json" }}
-          - node8-dependencies-
+          - dependency-cache-{{ checksum "package.json" }}
+          - dependency-cache-
 
       - run: yarn install
 
       - save_cache:
           paths:
             - node_modules
-          key: node8-dependencies-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
         
       - run: yarn test
   build-10:
@@ -33,15 +33,15 @@ jobs:
 
       - restore_cache:
           keys:
-          - node10-dependencies-{{ checksum "package.json" }}
-          - node10-dependencies-
+          - dependency-cache-{{ checksum "package.json" }}
+          - dependency-cache-
 
       - run: yarn install
 
       - save_cache:
           paths:
             - node_modules
-          key: node10-dependencies-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "package.json" }}
         
       - run: yarn test
 
