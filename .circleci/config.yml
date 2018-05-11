@@ -22,7 +22,7 @@ jobs:
           key: node8-dependencies-{{ checksum "package.json" }}
         
       - run: yarn test
-    build-10:
+  build-10:
     docker:
       - image: circleci/node:10
 
