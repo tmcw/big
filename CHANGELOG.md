@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.2"></a>
+## [3.2.2](https://github.com/tmcw/big/compare/v3.2.1...v3.2.2) (2018-05-12)
+
+
+### Bug Fixes
+
+* **package:** update cpy to version 7.0.0 ([#146](https://github.com/tmcw/big/issues/146)) ([d96a22c](https://github.com/tmcw/big/commit/d96a22c))
+
+
+
 <a name="3.2.1"></a>
 ## [3.2.1](https://github.com/tmcw/big/compare/v3.2.0...v3.2.1) (2018-04-15)
 
