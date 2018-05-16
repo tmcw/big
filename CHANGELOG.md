@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.2.3"></a>
+## [3.2.3](https://github.com/tmcw/big/compare/v3.2.2...v3.2.3) (2018-05-16)
+
+
+### Bug Fixes
+
+* Add page breaks in print mode ([#149](https://github.com/tmcw/big/issues/149)) ([f89c9fd](https://github.com/tmcw/big/commit/f89c9fd))
+
+
+
 <a name="3.2.2"></a>
 ## [3.2.2](https://github.com/tmcw/big/compare/v3.2.1...v3.2.2) (2018-05-12)
 
