@@ -114,6 +114,7 @@ body.print-mode div.sub-container {
   padding: 10px 20px;
   display: flex;
   flex-flow: row wrap;
+  page-break-after: always;
 }
 
 ul.notes-list {
