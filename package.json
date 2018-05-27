@@ -33,7 +33,6 @@
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
     "documentation": "^6.1.0",
-    "eslint": "^4.1.0",
     "flow-bin": "^0.71.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
@@ -47,33 +46,6 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
-  },
-  "eslintConfig": {
-    "rules": {
-      "indent": [
-        2,
-        2
-      ],
-      "no-console": [
-        0
-      ],
-      "quotes": [
-        0
-      ],
-      "linebreak-style": [
-        2,
-        "unix"
-      ],
-      "semi": [
-        2,
-        "always"
-      ]
-    },
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "extends": "eslint:recommended"
   },
   "dependencies": {
     "cpy": "^7.0.0",
