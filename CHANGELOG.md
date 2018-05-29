@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/tmcw/big/compare/v3.2.3...v3.3.0) (2018-05-29)
+
+
+### Features
+
+* Listen for connections on the specified port ([#156](https://github.com/tmcw/big/issues/156)) ([3d54f90](https://github.com/tmcw/big/commit/3d54f90))
+
+
+
 <a name="3.2.3"></a>
 ## [3.2.3](https://github.com/tmcw/big/compare/v3.2.2...v3.2.3) (2018-05-16)
 
