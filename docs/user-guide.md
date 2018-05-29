@@ -18,7 +18,8 @@ When you install it with npm or yarn, you get these four utilities:
   files in the current directory, or specify a directory name to create
   a new directory and put the files in that.
 * `big-presentation-serve`
-  * Serves up your presentation.
+  * Serves up your presentation on an arbitrary unused port
+  * To serve your presentation on a specific port use the environment variable **PORT** (ex : `PORT=3001 big-presentation-serve`)
 * `big-presentation-offline`
   * Creates an `index.offline.html` file with everything that can be included,
     included inline in the HTML, so you don't have to trust wifi
