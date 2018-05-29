@@ -4,7 +4,7 @@ var ip = require('ip');
 var getPort = require('get-port');
 var ecstatic = require('ecstatic');
 
-getPort().then(function(port) {
+getPort({port: process.env.PORT}).then(function(port) {
   http.createServer(ecstatic({ root: process.cwd() })).listen(port);
 
   var message = 'Serving!\n\n';
