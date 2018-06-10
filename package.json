@@ -1,6 +1,6 @@
 {
   "name": "big-presentation",
-  "version": "3.2.3",
+  "version": "3.3.0",
   "description": "a presentation system for busy messy hackers",
   "main": "big.js",
   "scripts": {
@@ -32,8 +32,8 @@
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
-    "documentation": "^6.1.0",
-    "flow-bin": "^0.71.0",
+    "documentation": "^8.0.0",
+    "flow-bin": "^0.73.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
     "stylelint": "^9.2.0",
@@ -53,7 +53,7 @@
     "get-port": "^3.1.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
-    "marked": "^0.3.6",
+    "marked": "^0.4.0",
     "mustache": "^2.3.0"
   }
 }
