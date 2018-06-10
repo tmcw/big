@@ -4,7 +4,7 @@
   "description": "a presentation system for busy messy hackers",
   "main": "big.js",
   "scripts": {
-    "test": "eslint lib/big.js && stylelint lib/big.css && flow",
+    "test": "stylelint lib/big.css && flow",
     "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
     "release": "standard-version"
   },
