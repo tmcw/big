@@ -56,7 +56,9 @@ Big has three modes, which you can swap between by hitting `t`, `p`, and `j`.
 * **p**rint: useful for print output, or as an overview: will typically provide
   two slides per printed page, and shows speakers notes along with slides
 * **j**ump: Shows many slides per page, useful for quickly finding a slide
-  and 'jumping' to it.
+  and 'jumping' to it. When you're in jump mode, you can use the arrow keys to
+  quickly select a slide and hit Enter to jump to that slide, or click the
+  slide you want.
 
 # `big-presentation-compose`
 
