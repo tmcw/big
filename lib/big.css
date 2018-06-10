@@ -92,7 +92,7 @@ div.imageText {
 }
 
 /* normally not good, but ok in context of full screen directional navigation */
-:focus {
+.talk-mode .slide:focus {
   outline: 0;
 }
 
