@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.4.0"></a>
+# [3.4.0](https://github.com/tmcw/big/compare/v3.3.0...v3.4.0) (2018-06-10)
+
+
+### Bug Fixes
+
+* **package:** update marked to version 0.4.0 ([#150](https://github.com/tmcw/big/issues/150)) ([1e2ede6](https://github.com/tmcw/big/commit/1e2ede6))
+
+
+### Features
+
+* **jump:** Better navigation in jump mode ([#151](https://github.com/tmcw/big/issues/151)) ([6491c07](https://github.com/tmcw/big/commit/6491c07)), closes [#138](https://github.com/tmcw/big/issues/138)
+
+
+
 <a name="3.3.0"></a>
 # [3.3.0](https://github.com/tmcw/big/compare/v3.2.3...v3.3.0) (2018-05-29)
 
