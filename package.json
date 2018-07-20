@@ -2,7 +2,7 @@
   "name": "big-presentation",
   "version": "3.4.0",
   "description": "a presentation system for busy messy hackers",
-  "main": "big.js",
+  "main": "lib/big.js",
   "scripts": {
     "test": "stylelint lib/big.css && flow",
     "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
