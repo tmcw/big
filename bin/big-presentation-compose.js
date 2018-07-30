@@ -5,6 +5,17 @@ var cpy = require('cpy');
 var path = require('path');
 var marked = require('marked');
 var mustache = require('mustache');
+var minimist = require('minimist');
+
+var options = minimist(process.argv.slice(2), {
+  string: ['theme'],
+  alias: {
+    theme: 't'
+  },
+  default: {
+    theme: 'light'
+  }
+})
 
 try {
   var markdownText = fs.readFileSync('index.md', 'utf8');
@@ -25,7 +36,8 @@ cpy(path.join(__dirname, '../lib/*'), './', { overwrite: false })
       fs.readFileSync(path.join(__dirname, './template.hbs'), 'utf8'), {
         //TODO parameterize title?
         title: 'big',
-        slides: divs
+        slides: divs,
+        theme: options.theme
       });
     fs.writeFileSync('index.html', renderedTemplate);
   })
