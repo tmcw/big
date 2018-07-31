@@ -223,3 +223,12 @@ This system is designed with live presentations in mind. There are usually bette
 ```
 
 Note that since the WebVTT will handle advancing slides, `data-time-to-next` won't work if an audio tag is defined. This functionality also means that successfully embedding other `<audio>` elements in your talk will probably require some JavaScript surgery.
+
+## `big-presentation-compose`
+### Theme
+If you want to use the dark theme and you are too lazy to update the compiled html file you can use the `-t` or `--theme` flag!
+```bash
+# default is 'light'
+big-presentation-compose -t dark
+big-presentation-compose --theme dark
+```
