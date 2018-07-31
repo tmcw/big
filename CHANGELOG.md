@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.5.0"></a>
+# [3.5.0](https://github.com/tmcw/big/compare/v3.4.1...v3.5.0) (2018-07-31)
+
+
+### Features
+
+* **compose:** Make theme configurable with a --theme or -t CLI flag ([8435450](https://github.com/tmcw/big/commit/8435450))
+
+
+
 <a name="3.4.1"></a>
 ## [3.4.1](https://github.com/tmcw/big/compare/v3.4.0...v3.4.1) (2018-07-20)
 
