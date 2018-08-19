@@ -50,7 +50,7 @@
   "dependencies": {
     "cpy": "^7.0.0",
     "ecstatic": "^3.1.1",
-    "get-port": "^3.1.0",
+    "get-port": "^4.0.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
     "marked": "^0.5.0",
