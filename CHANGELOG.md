@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="3.5.1"></a>
+## [3.5.1](https://github.com/tmcw/big/compare/v3.5.0...v3.5.1) (2018-11-04)
+
+
+### Bug Fixes
+
+* **package:** update get-port to version 4.0.0 ([#163](https://github.com/tmcw/big/issues/163)) ([69dfede](https://github.com/tmcw/big/commit/69dfede))
+* **package:** update marked to version 0.5.0 ([#166](https://github.com/tmcw/big/issues/166)) ([c9220b9](https://github.com/tmcw/big/commit/c9220b9))
+* **package:** update mustache to version 3.0.0 ([#170](https://github.com/tmcw/big/issues/170)) ([e05bc39](https://github.com/tmcw/big/commit/e05bc39))
+
+
+
 <a name="3.5.0"></a>
 # [3.5.0](https://github.com/tmcw/big/compare/v3.4.1...v3.5.0) (2018-07-31)
 
