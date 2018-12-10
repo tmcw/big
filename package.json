@@ -32,7 +32,7 @@
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
-    "documentation": "^8.0.0",
+    "documentation": "^9.0.0",
     "flow-bin": "^0.86.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
