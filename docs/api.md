@@ -2,13 +2,13 @@
 
 ### Table of Contents
 
--   [big](#big)
-    -   [current](#current)
-    -   [mode](#mode)
-    -   [forward](#forward)
-    -   [reverse](#reverse)
-    -   [go](#go)
-    -   [length](#length)
+-   [big][1]
+    -   [current][2]
+    -   [mode][3]
+    -   [forward][4]
+    -   [reverse][5]
+    -   [go][6]
+    -   [length][7]
 
 ## big
 
@@ -17,6 +17,8 @@ The big API
 ### current
 
 The current slide
+
+Type: [number][8]
 
 ### mode
 
@@ -37,3 +39,21 @@ Go to a numbered slide
 ### length
 
 The number of slides in this presentation
+
+Type: [number][8]
+
+[1]: #big
+
+[2]: #current
+
+[3]: #mode
+
+[4]: #forward
+
+[5]: #reverse
+
+[6]: #go
+
+[7]: #length
+
+[8]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number

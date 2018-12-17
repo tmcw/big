@@ -4,7 +4,7 @@
   "description": "a presentation system for busy messy hackers",
   "main": "lib/big.js",
   "scripts": {
-    "test": "stylelint lib/big.css && flow",
+    "test": "stylelint lib/big.css",
     "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
     "release": "standard-version"
   },
@@ -32,8 +32,7 @@
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
     "cz-conventional-changelog": "^2.0.0",
-    "documentation": "^8.0.0",
-    "flow-bin": "^0.86.0",
+    "documentation": "^9.1.0",
     "prettier": "^1.1.0",
     "standard-version": "^4.0.0",
     "stylelint": "^9.2.0",
