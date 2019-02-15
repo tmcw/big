@@ -34,7 +34,7 @@
     "cz-conventional-changelog": "^2.0.0",
     "documentation": "^9.1.0",
     "prettier": "^1.1.0",
-    "standard-version": "^4.0.0",
+    "standard-version": "^5.0.0",
     "stylelint": "^9.2.0",
     "stylelint-config-standard": "^18.2.0"
   },
