@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [3.6.0](https://github.com/tmcw/big/compare/v3.5.1...v3.6.0) (2019-02-22)
+
+
+### Bug Fixes
+
+* **package:** update marked to version 0.6.0 ([160f23e](https://github.com/tmcw/big/commit/160f23e))
+
+
+### Features
+
+* background image preloading ([9a3bb9e](https://github.com/tmcw/big/commit/9a3bb9e))
+
+
+
 <a name="3.5.1"></a>
 ## [3.5.1](https://github.com/tmcw/big/compare/v3.5.0...v3.5.1) (2018-11-04)
 
