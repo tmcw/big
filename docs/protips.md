@@ -211,6 +211,10 @@ You can center a slide on an image with CSS, the same way you center images on w
 <div data-bodyclass="center-image">per slide body classes</div>
 ```
 
+## Multiple Displays
+
+If you open your presentation in multiple browser windows, all windows will stay in sync as you navigate through slides. This allows to you to create one fullscreen presentation for the projector, and one preview presentation with presenter notes open on your laptop.
+
 ## Recorded Audio
 
 This system is designed with live presentations in mind. There are usually better forms for conveying your talk's contents online. On the other hand, it's really easy to record your talk's audio with your phone and throw it online with your slides. This is supported via the addition of an appropriate `<audio>` tag and [WebVTT](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API) file. All you'll have to do is time the transitions between slides and write a simple text file, then drop the following tag before `</body>`.
