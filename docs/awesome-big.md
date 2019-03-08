@@ -1,6 +1,7 @@
 ## Presentations with Big
 
 * [the demo](http://macwright.org/big/demo.html)
+* [Quick and Dirty Presentations with big](https://johncmunson.github.io/big-presentation-demo/#0) by (johncmunson)[https://github.com/johncmunson]
 * [javascript for cats](http://maxogden.github.com/slides/empirejs/index.html#0) by [Max Ogden](http://maxogden.com/) for [empire js](http://empirejs.org/) and there's a
   [great video of him presenting it](http://www.youtube.com/watch?v=GeCWaTML3D0)
 * [d3-geo](http://exposedata.com/talk/d3-geo/#0) by [Kai Chang](https://twitter.com/syntagmatic)
