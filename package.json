@@ -34,7 +34,7 @@
     "documentation": "^9.1.0",
     "prettier": "^1.1.0",
     "standard-version": "^5.0.0",
-    "stylelint": "^9.2.0",
+    "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.2.0"
   },
   "stylelint": {
@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "cpy": "^7.0.0",
-    "ecstatic": "^3.1.1",
+    "ecstatic": "^4.1.0",
     "get-port": "^5.0.0",
     "inliner": "^1.12.1",
     "ip": "^1.1.5",
