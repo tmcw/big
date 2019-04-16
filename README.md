@@ -1,10 +1,4 @@
 <p align="center">
-  <a href="https://tommacwright.typeform.com/to/EcYjLf">
-    <img width="460" src='.github/big-survey.png' />
-  </a>
-</p>
-
-<p align="center">
   <img width="540" src='.github/logo.png' />
 </p>
 
