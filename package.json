@@ -40,6 +40,9 @@
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
+  "resolutions": {
+    "conventional-changelog": "^1.0.0"
+  },
   "dependencies": {
     "cpy": "^7.0.0",
     "ecstatic": "^3.1.1",
