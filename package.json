@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
-    "documentation": "^9.1.0",
+    "documentation": "^10.0.0",
     "prettier": "^1.1.0",
     "standard-version": "^5.0.0",
     "stylelint": "^9.2.0",
