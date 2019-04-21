@@ -1,20 +1,10 @@
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    local('Rubik'),
-    local('Rubik-Regular'),
-    url('./rubik-v4-latin-regular.woff2') format('woff2'),
-    url('./rubik-v4-latin-regular.woff') format('woff');
-}
-
 html {
   height: 100%;
 }
 
 body {
-  font-family: Rubik, -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica, 'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-weight: 700;
   margin: 0;
   padding: 0;
 }
