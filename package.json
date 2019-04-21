@@ -4,7 +4,7 @@
   "description": "a presentation system for busy messy hackers",
   "main": "lib/big.js",
   "scripts": {
-    "test": "stylelint lib/big.css",
+    "test": "eslint lib/big.js && stylelint lib/big.css",
     "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
     "release": "standard-version"
   },
@@ -32,6 +32,7 @@
   "homepage": "https://github.com/tmcw/big#readme",
   "devDependencies": {
     "documentation": "^9.1.0",
+    "eslint": "^5.16.0",
     "prettier": "^1.1.0",
     "standard-version": "^5.0.0",
     "stylelint": "^10.0.1",
