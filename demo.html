@@ -6,45 +6,45 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
   <link href='lib/big.css' rel='stylesheet' type='text/css' />
   <link href='lib/themes/white.css' rel='stylesheet' type='text/css' />
+  <script>BIG_ASPECT_RATIO=2;</script>
   <script src='lib/big.js'></script>
 </head>
 <body>
-<div>use &harr; to navigate</div>
 <div>
-    Big
-    <notes>Speakers notes!</notes>
-    <notes>Even more than one.</notes>
-</div>
-<div class='center'><em>Presentation software</em> for busy busy hackers</div>
-<div>+text</div>
-<div>
-  <div style='display:grid;grid-template-columns: 50% 50%;align-items:center;'>
-    <div>test</div>
-    <div>And test. This is long content, much longer than the left side. So much longer, right?</div>
-  </div>
+  Big
 </div>
 <div>
-  <div style='display:grid;grid-template-columns: 50% 50%;align-items:center;'>
-    <div style='display:flex;align-items:center;'><img src='airplane.gif'/></div>
-    <div>And extinguish.</div>
-  </div>
+  v4
 </div>
-<div><pre><code>// and
-var code = true;
-var x = 'foo';
-class re { }
-var r = /tag/g;
-var y = [1, 2, 3];
-function javascript() {
-  return probably;
-}</code></pre></div>
-<div>as <em>big</em> as it can be</div>
-<div>with <div style='font-style:italic;background:#fff;'>normal HTML</div></div>
-<div data-time-to-next='3'>and now it's perfect for ignite talks (wait 3 seconds)</div>
-<div>no config</div>
-<div><em>1.5k</em></div>
-<div data-bodyclass='light-text' data-background-image='http://farm3.static.flickr.com/2506/5757000880_509440308e_z.jpg'>images too</div>
-<div data-bodyclass='new-shiny'>per slide body classes</div>
-<div>JS+CSS <a href='https://github.com/tmcw/big'>github.com/ tmcw/ big</a></div>
+<div>
+  <ul>
+    <li>Aspect ratios</li>
+    <li>Layouts</li>
+  </ul>
+</div>
+<div class=layout style='grid-template-columns: 1fr;grid-template-rows:75% 25%;'>
+  <img src='airplane.gif'/>
+  <div>A longer description!</div>
+</div>
+<div class=layout style='grid-template-columns: 1fr;grid-template-rows:25% 75%;'>
+  <div>A longer description!</div>
+  <img src='airplane.gif'/>
+</div>
+<div class=layout style='grid-template-columns: 50% 50%;'>
+  <img src='airplane.gif'/>
+  <div>A longer description!</div>
+</div>
+<div class=layout style='grid-template-columns: 50% 50%;'>
+  <div>A longer description!</div>
+  <img src='airplane.gif'/>
+</div>
+<div class=layout style='grid-template-columns: 25% 75%;grid-template-rows:repeat(3, 30%);'>
+  <img src='airplane.gif'/>
+  <div>Yes</div>
+  <img src='airplane.gif'/>
+  <div>No</div>
+  <img src='airplane.gif'/>
+  <div>Just right, a lot of text goes here. Lots of text. So much. What happens when it overflows?</div>
+</div>
 </body>
 </html>
