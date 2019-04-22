@@ -1,0 +1,17 @@
+body {
+  background: #272c32;
+  color: #fff;
+}
+
+em {
+  color: #fadb03;
+}
+
+a {
+  color: #7cbfe5;
+  text-decoration-skip: ink;
+}
+
+a:hover {
+  background: #4e5b6f;
+}
