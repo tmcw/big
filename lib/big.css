@@ -16,52 +16,16 @@ p {
   margin: 0;
 }
 
-a {
-  color: #fff;
-  text-decoration-skip: ink;
-  border-radius: 6px;
-}
-
 em {
   font-style: normal;
 }
 
-.dark {
-  background: #272c32;
-  color: #fff;
-}
-
-.dark em {
-  color: #fadb03;
-}
-
-.light a {
-  color: #0889d1;
-}
-
-.dark a {
-  color: #7cbfe5;
-}
-
-.dark a:hover {
-  background: #4e5b6f;
-}
-
-.light {
-  background: #f5f5f5;
-  color: #34383e;
-}
-
-.light em {
-  color: #d13787;
-}
-
-.light a:hover {
-  color: #0069a4;
-}
-
 img {
   width: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 div.slide-container {
@@ -70,8 +34,8 @@ div.slide-container {
   align-items: center;
 }
 
+
 div.slide {
-  box-sizing: border-box;
   cursor: pointer;
   cursor: hand;
   padding: 4%;
