@@ -45,7 +45,6 @@ $ npx big-presentation offline
 * :blue_book: [User Guide](docs/user-guide.md)
 * :green_book: [API Documentation](docs/api.md)
 * :pencil: [Protips](docs/protips.md)
-* :camera: [Presentations using big](docs/awesome-big.md)
 * :grapes: [Related projects](docs/see-also.md)
 
 ---
