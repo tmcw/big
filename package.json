@@ -9,10 +9,7 @@
     "release": "standard-version"
   },
   "bin": {
-    "big-presentation-init": "./bin/big-presentation-init.js",
-    "big-presentation-serve": "./bin/big-presentation-serve.js",
-    "big-presentation-offline": "./bin/big-presentation-offline.js",
-    "big-presentation-compose": "./bin/big-presentation-compose.js"
+    "big": "./bin/big.js"
   },
   "repository": {
     "type": "git",
@@ -41,17 +38,12 @@
   "stylelint": {
     "extends": "stylelint-config-standard"
   },
-  "resolutions": {
-    "conventional-changelog": "^1.0.0"
-  },
   "dependencies": {
+    "commander": "^2.20.0",
     "cpy": "^7.0.0",
     "ecstatic": "^4.1.0",
     "get-port": "^5.0.0",
     "inliner": "^1.12.1",
-    "ip": "^1.1.5",
-    "marked": "^0.6.0",
-    "minimist": "^1.2.0",
-    "mustache": "^3.0.0"
+    "ip": "^1.1.5"
   }
 }

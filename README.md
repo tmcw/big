@@ -6,40 +6,38 @@
   <strong>Big.</strong> The antidote to your presentation procrastination.
 </p>
 
-A presentation system that works great for creative, hurried people making
-focused presentations. Stop tweaking fonts and filling slides with text.
-Big is a configuration-free system that naturally encourages good presentation
-design.
+A presentation system that works great for creative, hurried people making focused presentations. Stop tweaking fonts and filling slides with text. Big is a configuration-free system that naturally encourages good style.
 
-**Quickstart**
+### Features
 
-Install big-presentation.
+- The entire system is about 16kb
+- Slide layouts based on CSS Grid
+- Includes tools to make presentations self-contained so you can present offline
+- Speakers notes appear in your developer console, which you can put on your other screen
+- Several themes available
 
-```sh
-$ npm install -g big-presentation
-```
+### Quickstart
 
-Create a new presentation.
+_These instructions assume you have [NPM](https://www.npmjs.com/get-npm) installed._
 
-```sh
-$ big-presentation-init all-about-cats
-```
-
-Serve it so you can view it in a web browser.
+Use the `big create` command to create a new presentation. This will create a new directory and include the HTML, CSS, and JavaScript necessary.
 
 ```sh
-$ cd all-about-cats
-$ big-presentation-serve
+$ npx big-presentation big create all-about-cats
 ```
 
-Convert a presentation composed in Markdown into serve-able HTML.
+Serve that presentation so you can preview it locally:
 
 ```sh
 $ cd all-about-cats
-$ big-presentation-compose
+$ npx big-presentation big serve
 ```
 
-This will convert an `index.md` file in that presentation directory into an `index.html`.
+Copy in any online resources for the presentation so that you can show it without an internet connection.
+
+```sh
+$ npx big-presentation offline
+```
 
 :tada: :tada: :tada: :tada: :tada:
 

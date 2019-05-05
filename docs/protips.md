@@ -1,14 +1,6 @@
 # big cookbook
 
-The ideal presentation is gesamtkunstwerk. While the big default style and
-behavior is nice and simple, there are lots of things you might want as
-you go along in your presentation-crafting. Having done
-quite a few [presentations](http://www.macwright.org/presentations/)
-using this system, I've done a lot of per-presentation tweaks and have some
-general-usage protips to share.
 
-Recipes are presented as HTML, that would go in `index.html`, and CSS,
-that can go in `big.css`.
 
 ## Themes
 
