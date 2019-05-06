@@ -1,5 +1,5 @@
 {
-  "name": "big-presentation",
+  "name": "@tmcw/big",
   "version": "3.6.0",
   "description": "a presentation system for busy messy hackers",
   "main": "lib/big.js",
