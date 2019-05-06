@@ -8,9 +8,6 @@
     "doc": "documentation build lib/big.js -o docs/api.md -f md --access=public",
     "release": "standard-version"
   },
-  "bin": {
-    "big": "./bin/big.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tmcw/big.git"
@@ -37,13 +34,5 @@
   },
   "stylelint": {
     "extends": "stylelint-config-standard"
-  },
-  "dependencies": {
-    "commander": "^2.20.0",
-    "cpy": "^7.0.0",
-    "ecstatic": "^4.1.0",
-    "get-port": "^5.0.0",
-    "inliner": "^1.12.1",
-    "ip": "^1.1.5"
   }
 }

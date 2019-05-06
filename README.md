@@ -37,20 +37,14 @@ A presentation system that works great for creative, hurried people making focus
 
 _These instructions assume you have [NPM](https://www.npmjs.com/get-npm) installed._
 
-The easiest way to get started with big is by using `npx`, a CLI tool that you have automatically when you install npm. It'll let you run big's tools without installing them.
-
-Use the `big create` command to create a new presentation. This will create a new directory and include the HTML, CSS, and JavaScript necessary.
+Get big:
 
 ```bash
-$ npx @tmcw/big create all-about-cats
+$ npx degit tmcw/big
 ```
 
-Preview the presentation locally:
+Preview the presentation locally by double-clicking on `index.html`. Create a repository with it to share the presentation with Github Pages, or post the files to any other hosting service.
 
-```bash
-$ cd all-about-cats
-$ npx @tmcw/big serve
-```
 ## Writing a presentation
 
 Big presentations are webpages: slides are `div` elements, and any text styling or additional elements are addable by using HTML. The text in each div is sized to fit the screen. A slide can be as simple as:
