@@ -30,7 +30,6 @@ A presentation system that works great for creative, hurried people making focus
 
 - The entire system is about 16kb
 - Slide layouts based on CSS Grid
-- Includes tools to make presentations self-contained so you can present offline
 - Speakers notes appear in your developer console, which you can put on your other screen
 - Themes are just CSS, and easy to make
 
@@ -51,12 +50,6 @@ Preview the presentation locally:
 ```bash
 $ cd all-about-cats
 $ npx @tmcw/big serve
-```
-
-Bundle online resources for the presentation so that you can show it without an internet connection.
-
-```bash
-$ npx @tmcw/big offline
 ```
 ## Writing a presentation
 
@@ -244,4 +237,4 @@ At the very least, themes are CSS files. You can pick a theme by picking one in 
 - **light**: like dark, but flipped.
 - **white**: instead of tastefully off-white and off-black, this theme uses stark, literal black & white colors.
 
-[![Circle CI](#)(https://circleci.com/gh/tmcw/big/tree/gh-pages.svg?style=shield&circle-token=2963848e42fe67b8a66a2ad2d6dd99d05bdde6a4)](https://circleci.com/gh/tmcw/big/tree/gh-pages) [![Greenkeeper badge](#)(https://badges.greenkeeper.io/tmcw/big.svg)](https://greenkeeper.io/)
+[![](https://circleci.com/gh/tmcw/big/tree/gh-pages.svg?style=shield&circle-token=2963848e42fe67b8a66a2ad2d6dd99d05bdde6a4 "Circle CI")](https://circleci.com/gh/tmcw/big/tree/gh-pages)

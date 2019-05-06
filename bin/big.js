@@ -1,26 +1,6 @@
 #!/usr/bin/env node
 const program = require("commander");
 
-program.command("offline").action(() => {
-  const Inliner = require("inliner");
-  const http = require("http");
-  const ecstatic = require("ecstatic");
-  const getPort = require("get-port");
-  const fs = require("fs");
-  getPort().then(function(port) {
-    const server = http
-      .createServer(ecstatic({ root: process.cwd() }))
-      .listen(port, function() {
-        new Inliner("http://localhost:" + port, function(error, html) {
-          // compressed and inlined HTML page
-          fs.writeFileSync("./index.offline.html", html);
-          console.log("Done! Wrote index.offline.html with inlined resources");
-          server.close();
-        });
-      });
-  });
-});
-
 program.command("init <dir>").action(directory => {
   const path = require("path");
   const fs = require("fs");
