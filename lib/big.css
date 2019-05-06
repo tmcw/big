@@ -20,11 +20,9 @@ em {
   font-style: normal;
 }
 
-/*
-img {
-  width: 100%;
+.nowrap {
+  white-space: nowrap;
 }
-*/
 
 * {
   box-sizing: border-box;
@@ -114,4 +112,8 @@ body.jump-mode div.slide-container:hover {
   object-fit: contain;
   width: 100%;
   height: 100%;
+}
+
+div.slide > img:only-child {
+  width: 100%;
 }
