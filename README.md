@@ -1,7 +1,5 @@
 # Big
 
-[Get started on Glitch](https://glitch.com/edit/#!/remix/clone-from-repo?REPO_URL=https://github.com/tmcw/big.git)
-
 <p align="center">
   <img width="540" src='.github/logo.png' />
 </p>
@@ -15,18 +13,15 @@
 A presentation system that works great for creative, hurried people making focused presentations. Stop tweaking fonts and filling slides with text. Big is a configuration-free system that naturally encourages good style.
 
 - Features
-- Quickstart
+- Quickstart installation: Glitch
+- Local installation
 - Writing a presentation
 - Giving a presentation
-	- Basic controls
-	- Modes
 - Customization
 	- Themes
 	- Layouts
 	- Code
 	- Backgrounds
-- Endnotes
-	- How to support this project
 
 ## Features
 
@@ -35,17 +30,26 @@ A presentation system that works great for creative, hurried people making focus
 - Speakers notes appear in your developer console, which you can put on your other screen
 - Themes are just CSS, and easy to make
 
-## Quickstart
+## Quickstart installation: Glitch
 
-_These instructions assume you have [NPM](https://www.npmjs.com/get-npm) installed._
+The absolute fastest way to get started is with Glitch. Just click the link below, and you’ll get the freshest version of Big, in a Glitch app that you can edit and publish.
 
-Get big:
+[Get started on Glitch](https://glitch.com/edit/#!/remix/clone-from-repo?REPO_URL=https://github.com/tmcw/big.git)
+
+## Local installation
+
+If you use NPM, the fastest way to get a copy of Big is this way:
 
 ```bash
 $ npx degit tmcw/big
 ```
 
-Preview the presentation locally by double-clicking on `index.html`. Create a repository with it to share the presentation with Github Pages, or post the files to any other hosting service.
+Preview the presentation locally by double-clicking on `index.html`. Create a repository with it to share the presentation with Github Pages, or post the files to any other hosting service. You’ll want to eventually use a real server instead of opening the file - to do that, install `serve` and run it:
+
+```bash
+$ npm install -g serve
+$ serve
+```
 
 ## Writing a presentation
 
@@ -64,8 +68,7 @@ If you want speakers notes - notes that you can see on your laptop screen but ar
 </div>
 ```
 
-Open your [developer console](http://debugbrowser.com/), and you'll see your
-speaker notes in it when you visit that slide! In most browsers, the console is detachable, so you can move it to a different screen or window when you're giving the presentation.
+Open your [developer console](http://debugbrowser.com/), and you'll see your speaker notes in it when you visit that slide! In most browsers, the console is detachable, so you can move it to a different screen or window when you're giving the presentation.
 
 That's all you need to start writing presentations!
 
@@ -80,12 +83,10 @@ Big also has three modes if you want to quickly jump to a slide, or print a pres
 * **t**alk is the default mode. Slides are shown one at a time.
 * **p**rint: is useful for print output or as an overview: it'll include
   two slides per printed page, and shows speakers notes along with slides
-* **j**ump: Shows many slides per page, useful for quickly finding a slide
-  and 'jumping' to it. When you're in jump mode, you can use the arrow keys to
-  quickly select a slide and hit Enter to jump to that slide, or click the
+* **j**ump: Shows many slides per page, useful for quickly finding a slide and 'jumping' to it. When you're in jump mode, you can use the arrow keys to quickly select a slide and hit Enter to jump to that slide, or click the
   slide you want.
 
-## Using big
+## Using Big
 
 Big is designed to be simple, so if you just want to give a [Takahashi](https://en.wikipedia.org/wiki/Takahashi_method) style presentation with just text, you don't need to read any further! But it can also go far beyond the basics.
 
@@ -154,6 +155,7 @@ This slide will be laid out vertically, with the image taking up 75% of the vert
   <div>Just right, a lot of text goes here.</div>
 </div>
 ```
+
 ### Customizing the aspect ratio
 
 To keep presentations uniform across devices, Big keeps the aspect ratio of presentations constant by default: by default, presentations are 4:3 aspect ratio.
@@ -162,16 +164,17 @@ You can customize the aspect ratio by setting a `BIG_ASPECT_RATIO` variable _bef
 
 ```html
 <script>BIG_ASPECT_RATIO=2;</script>
-<script src='lib/big.js'></script>
+<script src='big.js'></script>
 ```
 
 You can also turn this feature off, by setting `BIG_ASPECT_RATIO` to `false`, which will let presentations occupy the aspect ratio of the device they're displayed on:
 
 ```html
 <script>BIG_ASPECT_RATIO=false;</script>
-<script src=lib/big.js></script>
+<script src='big.js'></script>
 ```
-### Avoiding linebreaks
+
+### Avoiding line breaks
 
 By default, Big will wrap lines of text. Sometimes you don't want this to happen, if you have some text that would look odd wrapped. In this case, you can use the `nowrap` class to keep some text from wrapping.
 
@@ -182,6 +185,7 @@ By default, Big will wrap lines of text. Sometimes you don't want this to happen
   <small class=nowrap>@tmcw / Tom MacWright</small>
 </div>
 ```
+
 ### Auto-advancing slides
 
 Sometimes you'll give presentations like [PechaKucha](https://en.wikipedia.org/wiki/PechaKucha) and [Ignite](https://en.wikipedia.org/wiki/Ignite_(event)) involve auto-advancing slides. You can achieve this by adding a `data-time-to-next` attributes to slides: this will cause  them to auto-advance after a specific number of seconds:
@@ -191,6 +195,7 @@ Sometimes you'll give presentations like [PechaKucha](https://en.wikipedia.org/w
   My sales pitch in 20 seconds
 </div>
 ```
+
 ### Showing code
 
 There are many ways to do code highlighting in presentations. My personal
@@ -222,10 +227,9 @@ pre em {
 
 But if you want traditional code highlighting, you can include [highlight.js](https://highlightjs.org/) to do just that. You'll want to include [the library](https://highlightjs.org/download/), and use `hljs.initHighlightingOnLoad();` like [in their usage instructions](https://highlightjs.org/usage/).
 
-
 ### Themes
 
-Big presentations are tweakable, so you can design yours from scratch, or by customizing one of the default themes, but there are also a few default themes so that you can get going with a solid aesthetic right off the bat.
+Big presentations are hackable, so you can design yours from scratch, or by customizing one of the default themes, but there are also a few default themes so that you can get going with a solid aesthetic right off the bat.
 
 At the very least, themes are CSS files. You can pick a theme by picking one in the `themes` directory. Bundled with Big are these themes:
 
