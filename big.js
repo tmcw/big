@@ -76,10 +76,10 @@ addEventListener("load", function() {
     slideDivs.forEach((slide, i) => {
       slide.style.display = i === n ? "flex" : "none";
     });
-    body.className = `talk-mode ${slideDiv.getAttribute("data-body-class") || ""} ${initialBodyClass}`;
-    body.style.cssText = initialBodyClass + (slideDiv.getAttribute("data-body-style") || "");
+    body.className = `talk-mode ${slideDiv.dataset.bodyClass || ""} ${initialBodyClass}`;
+    body.style.cssText = `${initialBodyStyle} ${slideDiv.dataset.bodyStyle || ""}`;
     window.clearInterval(timeoutInterval);
-    if (slideDiv.hasAttribute("data-time-to-next")) timeoutInterval = window.setTimeout(forward, parseFloat(slideDiv.getAttribute("data-time-to-next")) * 1000);
+    if (slideDiv.dataset.timeToNext) timeoutInterval = window.setTimeout(forward, parseFloat(slideDiv.dataset.timeToNext) * 1000);
     onResize();
     if (window.location.hash !== n) window.location.hash = n;
     document.title = slideDiv.textContent;
@@ -111,15 +111,16 @@ addEventListener("load", function() {
   function onPrint() {
     if (big.mode === "print") return;
     body.className = `print-mode ${initialBodyClass}`;
+    body.style.cssText = initialBodyStyle;
     emptyNode(pc);
     for (let sc of slideDivs) {
       let subContainer = pc.appendChild(ce("div", "sub-container")),
-        sbc = subContainer.appendChild(ce("div", sc.firstChild.getAttribute("data-body-class") || ""));
+        sbc = subContainer.appendChild(ce("div", sc.firstChild.dataset.bodyClass || ""));
       sbc.appendChild(sc);
+      sbc.style.cssText = sc.dataset.bodyStyle || "";
       sc.style.display = "flex";
-      useDataImageAsBackground(sc);
       resizeTo(sc, 512, 320);
-      if (!sc._notes.length) return;
+      if (sc._notes.length) continue;
       let notesUl = subContainer.appendChild(ce("ul", "notes-list"));
       for (let note of sc._notes) {
         let li = notesUl.appendChild(ce("li"));
@@ -142,6 +143,7 @@ addEventListener("load", function() {
     if (big.mode === "jump") return;
     big.mode = "jump";
     body.className = "jump-mode " + initialBodyClass;
+    body.style.cssText = initialBodyStyle;
     emptyNode(pc);
     slideDivs.forEach(sc => {
       let subContainer = pc.appendChild(ce("div", "sub-container"));
@@ -152,16 +154,16 @@ addEventListener("load", function() {
         e.preventDefault();
         onTalk(sc._i);
       });
-      let sbc = subContainer.appendChild(ce("div", sc.firstChild.getAttribute("data-body-class") || ""));
+      let sbc = subContainer.appendChild(ce("div", sc.firstChild.dataset.bodyClass || ""));
       sbc.appendChild(sc);
       sc.style.display = "flex";
-      useDataImageAsBackground(sc);
+      sbc.style.cssText = sc.dataset.bodyStyle || "";
       resizeTo(sc, 192, 120);
       function onClickSlide(e) {
         subContainer.removeEventListener("click", onClickSlide);
         e.stopPropagation();
         e.preventDefault();
-        onTalk(sc._);
+        onTalk(sc._i);
       }
       subContainer.addEventListener("click", onClickSlide);
     });
