@@ -114,6 +114,8 @@ body.jump-mode div.slide-container:hover {
   height: 100%;
 }
 
-div.slide > img:only-child {
+div.slide > img:only-child,
+div.slide > canvas:only-child,
+div.slide > video:only-child {
   width: 100%;
 }
