@@ -4,10 +4,10 @@
   <title>Big</title>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-  <link href='lib/big.css' rel='stylesheet' type='text/css' />
-  <link href='lib/themes/slab.css' rel='stylesheet' type='text/css' />
+  <link href='big.css' rel='stylesheet' type='text/css' />
+  <link href='themes/white.css' rel='stylesheet' type='text/css' />
   <script>BIG_ASPECT_RATIO=2;</script>
-  <script src='lib/big.js'></script>
+  <script src='big.js'></script>
 </head>
 <body>
 <div>
@@ -45,6 +45,12 @@
   <div>No</div>
   <img src='airplane.gif'/>
   <div>Just right, a lot of text goes here. Lots of text. So much. What happens when it overflows?</div>
+</div>
+<div style='background-image: url(airplane.gif)'>
+  <div>I have a background image.</div>
+</div>
+<div data-body-style='background-image:url(airplane.gif)'>
+  <div>So do I</div>
 </div>
 </body>
 </html>

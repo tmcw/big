@@ -20,15 +20,6 @@ addEventListener("load", function() {
   slideDivs = slideDivs.map((slide, _i) => {
     slide.setAttribute("tabindex", 0);
     slide.classList.add("slide");
-
-    if (slide.hasAttribute("data-background-image")) {
-      let preloadLink = document.createElement("link");
-      preloadLink.href = slide.getAttribute("data-background-image");
-      preloadLink.rel = "preload";
-      preloadLink.as = "image";
-      document.head.appendChild(preloadLink);
-    }
-
     let sc = pc.appendChild(ce("div", "slide-container"));
     sc.appendChild(slide);
     return Object.assign(sc, {
@@ -41,7 +32,10 @@ addEventListener("load", function() {
   });
   let timeoutInterval,
     { body } = document,
-    { className: initialBodyClass } = body,
+    {
+      className: initialBodyClass,
+      style: { cssText: initialBodyStyle }
+    } = body,
     big = (window.big = {
       current: -1,
       mode: "talk",
@@ -57,7 +51,7 @@ addEventListener("load", function() {
     go(big.current - 1);
   }
 
-  body.className = "talk-mode " + initialBodyClass;
+  body.className = `talk-mode ${initialBodyClass}`;
   window.matchMedia("print").addListener(onPrint);
   document.addEventListener("click", onClick);
   document.addEventListener("keydown", onKeyDown);
@@ -67,16 +61,6 @@ addEventListener("load", function() {
   window.big = big;
   console.log("This is a big presentation. You can: \n\n* press j to jump to a slide\n" + "* press p to see the print view\n* press t to go back to the talk view");
   go(parseHash() || big.current);
-
-  function useDataImageAsBackground(sc) {
-    let { firstChild } = sc;
-    if (firstChild.hasAttribute("data-background-image")) {
-      sc.style.backgroundImage = `url("${firstChild.getAttribute("data-background-image")}")`;
-      return firstChild.classList.add("imageText");
-    }
-    sc.style.backgroundImage = "";
-    sc.style.backgroundColor = firstChild.style.backgroundColor;
-  }
 
   function go(n, force) {
     n = Math.max(0, Math.min(big.length - 1, n));
@@ -92,8 +76,8 @@ addEventListener("load", function() {
     slideDivs.forEach((slide, i) => {
       slide.style.display = i === n ? "flex" : "none";
     });
-    body.className = `talk-mode ${slideDiv.getAttribute("data-bodyclass") || ""} ${initialBodyClass}`;
-    useDataImageAsBackground(sc);
+    body.className = `talk-mode ${slideDiv.getAttribute("data-body-class") || ""} ${initialBodyClass}`;
+    body.style.cssText = initialBodyClass + (slideDiv.getAttribute("data-body-style") || "");
     window.clearInterval(timeoutInterval);
     if (slideDiv.hasAttribute("data-time-to-next")) timeoutInterval = window.setTimeout(forward, parseFloat(slideDiv.getAttribute("data-time-to-next")) * 1000);
     onResize();
@@ -130,7 +114,7 @@ addEventListener("load", function() {
     emptyNode(pc);
     for (let sc of slideDivs) {
       let subContainer = pc.appendChild(ce("div", "sub-container")),
-        sbc = subContainer.appendChild(ce("div", sc.firstChild.getAttribute("data-bodyclass") || ""));
+        sbc = subContainer.appendChild(ce("div", sc.firstChild.getAttribute("data-body-class") || ""));
       sbc.appendChild(sc);
       sc.style.display = "flex";
       useDataImageAsBackground(sc);
@@ -168,7 +152,7 @@ addEventListener("load", function() {
         e.preventDefault();
         onTalk(sc._i);
       });
-      let sbc = subContainer.appendChild(ce("div", sc.firstChild.getAttribute("data-bodyclass") || ""));
+      let sbc = subContainer.appendChild(ce("div", sc.firstChild.getAttribute("data-body-class") || ""));
       sbc.appendChild(sc);
       sc.style.display = "flex";
       useDataImageAsBackground(sc);
