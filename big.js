@@ -8,10 +8,8 @@ function emptyNode(node) {
   while (node.hasChildNodes()) node.removeChild(node.lastChild);
 }
 
-function ce(type, klass = "") {
-  let element = document.createElement(type);
-  element.className = klass;
-  return element;
+function ce(type, className = "") {
+  return Object.assign(document.createElement(type), { className });
 }
 
 addEventListener("load", function() {
@@ -187,17 +185,8 @@ addEventListener("load", function() {
           return forward();
       }
     }
-    switch (e.key) {
-      case "p":
-        onPrint();
-        break;
-      case "t":
-        onTalk(big.current);
-        break;
-      case "j":
-        onJump();
-        break;
-    }
+    let m = { p: onPrint, t: onTalk, j: onJump }[e.key];
+    if (m) m(big.current);
     if (big.mode !== "jump") return;
     let { activeElement } = document;
     if (activeElement && activeElement.classList.contains("slide")) {
@@ -264,12 +253,8 @@ addEventListener("load", function() {
     if (big.mode !== "talk") return;
     let { clientWidth: width, clientHeight: height } = document.documentElement;
     if (ASPECT_RATIO !== false) {
-      // Too wide
-      if (width / height > ASPECT_RATIO) {
-        width = Math.ceil(height * ASPECT_RATIO);
-      } else {
-        height = Math.ceil(width / ASPECT_RATIO);
-      }
+      if (width / height > ASPECT_RATIO) width = Math.ceil(height * ASPECT_RATIO);
+      else height = Math.ceil(width / ASPECT_RATIO);
     }
     resizeTo(slideDivs[big.current], width, height);
   }
