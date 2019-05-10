@@ -1,5 +1,7 @@
 # Big
 
+[Get started on Glitch](https://glitch.com/edit/#!/remix/clone-from-repo?REPO_URL=https://github.com/tmcw/big.git)
+
 <p align="center">
   <img width="540" src='.github/logo.png' />
 </p>
