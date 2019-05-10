@@ -227,6 +227,16 @@ pre em {
 
 But if you want traditional code highlighting, you can include [highlight.js](https://highlightjs.org/) to do just that. You'll want to include [the library](https://highlightjs.org/download/), and use `hljs.initHighlightingOnLoad();` like [in their usage instructions](https://highlightjs.org/usage/).
 
+### Backgrounds & body classes
+
+You might want to customize the class & style of the body element for a single slide. For example, maybe you want to change the background of the full page. You can do this with two attributes: `data-body-style` and `data-body-class`:
+
+```
+<div data-body-style="background-image:url(airplane.gif)">
+  <div>Slide will have an airplane background</div>
+</div>`
+```
+
 ### Themes
 
 Big presentations are hackable, so you can design yours from scratch, or by customizing one of the default themes, but there are also a few default themes so that you can get going with a solid aesthetic right off the bat.
