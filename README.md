@@ -236,7 +236,3 @@ At the very least, themes are CSS files. You can pick a theme by picking one in 
 - **dark**: near-black background and near-white text, this one is my go-to for most presentations that rely on underpowered projectors.
 - **light**: like dark, but flipped.
 - **white**: instead of tastefully off-white and off-black, this theme uses stark, literal black & white colors.
-
----
-
-[![](https://circleci.com/gh/tmcw/big/tree/gh-pages.svg?style=shield&circle-token=2963848e42fe67b8a66a2ad2d6dd99d05bdde6a4 "Circle CI")](https://circleci.com/gh/tmcw/big/tree/gh-pages)
