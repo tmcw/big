@@ -12,7 +12,7 @@ function ce(type, className = "") {
   return Object.assign(document.createElement(type), { className });
 }
 
-addEventListener("load", function() {
+addEventListener("load", () => {
   let slideDivs = Array.from(document.querySelectorAll("body > div"));
   let pc = document.body.appendChild(ce("div", "presentation-container"));
   slideDivs = slideDivs.map((slide, _i) => {
@@ -62,9 +62,7 @@ addEventListener("load", function() {
       for (let note of sc._notes) console.log("%c%s", "padding:5px;font-family:serif;font-size:18px;line-height:150%;", note);
       console.groupEnd();
     }
-    slideDivs.forEach((slide, i) => {
-      slide.style.display = i === n ? "flex" : "none";
-    });
+    for (let slide of slideDivs) slide.style.display = slide._i === n ? "flex" : "none";
     body.className = `talk-mode ${slideDiv.dataset.bodyClass || ""} ${initialBodyClass}`;
     body.style.cssText = `${initialBodyStyle} ${slideDiv.dataset.bodyStyle || ""}`;
     window.clearInterval(timeoutInterval);
@@ -180,26 +178,6 @@ addEventListener("load", function() {
     if (m) m(big.current);
   }
 
-  function onTouchStart(e) {
-    if (big.mode !== "talk") return;
-    let { pageX: startingPageX } = e.changedTouches[0];
-    document.addEventListener(
-      "touchend",
-      function(e2) {
-        let distanceTraveled = e2.changedTouches[0].pageX - startingPageX;
-        // Don't navigate if the person didn't swipe by fewer than 4 pixels
-        if (Math.abs(distanceTraveled) < 4) return;
-        if (distanceTraveled < 0) forward();
-        else reverse();
-      },
-      { once: true }
-    );
-  }
-
-  function onHashChange() {
-    if (big.mode === "talk") go(parseHash());
-  }
-
   function onResize() {
     if (big.mode !== "talk") return;
     let { clientWidth: width, clientHeight: height } = document.documentElement;
@@ -210,14 +188,29 @@ addEventListener("load", function() {
     resizeTo(slideDivs[big.current], width, height);
   }
 
-  body.className = `talk-mode ${initialBodyClass}`;
   window.matchMedia("print").addListener(onPrint);
   document.addEventListener("click", onClick);
   document.addEventListener("keydown", onKeyDown);
-  document.addEventListener("touchstart", onTouchStart);
-  addEventListener("hashchange", onHashChange);
+  document.addEventListener("touchstart", e => {
+    if (big.mode !== "talk") return;
+    let { pageX: startingPageX } = e.changedTouches[0];
+    document.addEventListener(
+      "touchend",
+      e2 => {
+        let distanceTraveled = e2.changedTouches[0].pageX - startingPageX;
+        // Don't navigate if the person didn't swipe by fewer than 4 pixels
+        if (Math.abs(distanceTraveled) < 4) return;
+        if (distanceTraveled < 0) forward();
+        else reverse();
+      },
+      { once: true }
+    );
+  });
+  addEventListener("hashchange", () => {
+    if (big.mode === "talk") go(parseHash());
+  });
   addEventListener("resize", onResize);
-  window.big = big;
   console.log("This is a big presentation. You can: \n\n* press j to jump to a slide\n" + "* press p to see the print view\n* press t to go back to the talk view");
+  body.className = `talk-mode ${initialBodyClass}`;
   go(parseHash() || big.current);
 });
