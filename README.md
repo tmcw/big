@@ -234,10 +234,10 @@ But if you want traditional code highlighting, you can include [highlight.js](ht
 
 You might want to customize the class & style of the body element for a single slide. For example, maybe you want to change the background of the full page. You can do this with two attributes: `data-body-style` and `data-body-class`:
 
-```
+```html
 <div data-body-style="background-image:url(airplane.gif)">
   <div>Slide will have an airplane background</div>
-</div>`
+</div>
 ```
 
 ### Themes
