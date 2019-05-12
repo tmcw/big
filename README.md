@@ -10,16 +10,19 @@
 
 A presentation system that works great for creative, hurried people making focused presentations. Stop tweaking fonts and filling slides with text. Big is a configuration-free system that naturally encourages good style.
 
-- Features
-- Quickstart installation: Glitch
-- Local installation
-- Writing a presentation
-- Giving a presentation
-- Customization
-	- Themes
-	- Layouts
-	- Code
-	- Backgrounds
+- [Features](#features)
+- [Quickstart installation: Glitch](#quickstart-installation--glitch)
+- [Alternative method: Local installation](#alternative-method--local-installation)
+- [Writing a presentation](#writing-a-presentation)
+- [Giving presentations](#giving-presentations)
+- [Using Big](#using-big)
+  - [Layouts & Images](#layouts---images)
+  - [Customizing the aspect ratio](#customizing-the-aspect-ratio)
+  - [Avoiding line breaks](#avoiding-line-breaks)
+  - [Auto advancing slides](#auto-advancing-slides)
+  - [Showing code](#showing-code)
+  - [Backgrounds & body classes](#backgrounds---body-classes)
+  - [Themes](#themes)
 
 ## Features
 
