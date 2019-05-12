@@ -8,8 +8,6 @@
   <strong>Big.</strong> The antidote to your presentation procrastination.
 </p>
 
-* [Demo](http://macwright.org/big/demo.html)
-
 A presentation system that works great for creative, hurried people making focused presentations. Stop tweaking fonts and filling slides with text. Big is a configuration-free system that naturally encourages good style.
 
 - Features
@@ -34,9 +32,11 @@ A presentation system that works great for creative, hurried people making focus
 
 The absolute fastest way to get started is with Glitch. Just click the link below, and you’ll get the freshest version of Big, in a Glitch app that you can edit and publish.
 
-[Get started on Glitch](https://glitch.com/edit/#!/remix/clone-from-repo?REPO_URL=https://github.com/tmcw/big.git)
+<!-- Remix Button --><a href="https://glitch.com/edit/#!/remix/tmcw-big">  <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix this" height="33"></a>
 
-## Local installation
+With Glitch, your presentation will be online and open source by default. You can download it and continue to work on it offline, or if you want to start offline by default and have the files locally, follow the alternative method below 👇
+
+## Alternative method: Local installation
 
 If you use NPM, the fastest way to get a copy of Big is this way:
 
@@ -186,7 +186,7 @@ By default, Big will wrap lines of text. Sometimes you don't want this to happen
 </div>
 ```
 
-### Auto-advancing slides
+### Auto advancing slides
 
 Sometimes you'll give presentations like [PechaKucha](https://en.wikipedia.org/wiki/PechaKucha) and [Ignite](https://en.wikipedia.org/wiki/Ignite_(event)) involve auto-advancing slides. You can achieve this by adding a `data-time-to-next` attributes to slides: this will cause  them to auto-advance after a specific number of seconds:
 
