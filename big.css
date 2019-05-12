@@ -60,14 +60,14 @@ body.print-mode {
   background: #fff;
   color: #000;
   font-weight: normal;
-  padding: 30px 20px;
+  padding: 0px;
 }
 
 body.print-mode div.sub-container {
   padding: 10px 20px;
   display: flex;
   flex-flow: row wrap;
-  page-break-after: always;
+  break-inside: avoid;
 }
 
 ul.notes-list {

@@ -62,7 +62,7 @@ addEventListener("load", () => {
       for (let note of sc._notes) console.log("%c%s", "padding:5px;font-family:serif;font-size:18px;line-height:150%;", note);
       console.groupEnd();
     }
-    for (let slide of slideDivs) slide.style.display = slide._i === n ? "flex" : "none";
+    for (let slide of slideDivs) slide.style.display = slide._i === n ? "" : "none";
     body.className = `talk-mode ${slideDiv.dataset.bodyClass || ""} ${initialBodyClass}`;
     body.style.cssText = `${initialBodyStyle} ${slideDiv.dataset.bodyStyle || ""}`;
     window.clearInterval(timeoutInterval);
