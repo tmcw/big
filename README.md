@@ -12,7 +12,7 @@ A presentation system that works great for creative, hurried people making focus
 
 - [Features](#features)
 - [Quickstart installation: Glitch](#quickstart-installation--glitch)
-- [Alternative method: Local installation](#alternative-method--local-installation)
+- [Alternative method: Local installation](#alternative-method-local-installation)
 - [Writing a presentation](#writing-a-presentation)
 - [Giving presentations](#giving-presentations)
 - [Using Big](#using-big)
