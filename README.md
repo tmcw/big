@@ -11,7 +11,6 @@
 A presentation system that works great for creative, hurried people making focused presentations. Stop tweaking fonts and filling slides with text. Big is a configuration-free system that naturally encourages good style.
 
 - [Features](#features)
-- [Quickstart installation: Glitch](#quickstart-installation-glitch)
 - [Alternative method: Local installation](#alternative-method-local-installation)
 - [Writing a presentation](#writing-a-presentation)
 - [Giving presentations](#giving-presentations)
@@ -30,14 +29,6 @@ A presentation system that works great for creative, hurried people making focus
 - Slide layouts based on CSS Grid
 - Speakers notes appear in your developer console, which you can put on your other screen
 - Themes are just CSS, and easy to make
-
-## Quickstart installation: Glitch
-
-The absolute fastest way to get started is with Glitch. Just click the link below, and you’ll get the freshest version of Big, in a Glitch app that you can edit and publish.
-
-<!-- Remix Button --><a href="https://glitch.com/edit/#!/remix/tmcw-big">  <img src="https://cdn.glitch.com/2bdfb3f8-05ef-4035-a06e-2043962a3a13%2Fremix%402x.png?1513093958726" alt="remix this" height="33"></a>
-
-With Glitch, your presentation will be online and open source by default. You can download it and continue to work on it offline, or if you want to start offline by default and have the files locally, follow the alternative method below 👇
 
 ## Alternative method: Local installation
 
